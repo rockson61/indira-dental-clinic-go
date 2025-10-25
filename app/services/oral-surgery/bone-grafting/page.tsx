@@ -426,42 +426,57 @@ export default function BoneGraftingPage() {
 
           {/* Internal Linking Widgets */}
           <RelevantQAWidget 
+            title="Related Dental Questions"
             questions={[
               {
+                id: "q1",
                 title: "What Should I Expect After Tooth Extraction?",
-                url: "/ask-the-dentist/tooth-extraction-recovery-care",
-                helpfulVotes: 63
+                slug: "tooth-extraction-recovery-care",
+                excerpt: "Learn about the recovery process and care instructions after tooth extraction to ensure proper healing.",
+                helpfulVotes: 63,
+                views: 850,
+                createdAt: "2024-02-10T10:00:00Z"
               },
               {
+                id: "q2",
                 title: "What are Dental Implants and How Long Do They Last?",
-                url: "/ask-the-dentist/dental-implants-longevity-benefits", 
-                helpfulVotes: 67
+                slug: "dental-implants-longevity-benefits",
+                excerpt: "Discover the longevity and benefits of dental implants as a permanent tooth replacement solution.",
+                helpfulVotes: 67,
+                views: 1200,
+                createdAt: "2024-02-08T10:00:00Z"
               },
               {
+                id: "q3",
                 title: "What is All-on-4 Dental Implants and Who is a Candidate?",
-                url: "/ask-the-dentist/all-on-4-dental-implants-candidacy",
-                helpfulVotes: 49
+                slug: "all-on-4-dental-implants-candidacy",
+                excerpt: "Learn about All-on-4 dental implants and whether you're a suitable candidate for this procedure.",
+                helpfulVotes: 49,
+                views: 680,
+                createdAt: "2024-02-05T10:00:00Z"
               }
             ]}
           />
 
           <CompactServiceWidget 
+            title="Related Oral Surgery Services"
+            description="Explore other oral surgery procedures we offer"
             services={[
               {
                 name: "Tooth Extraction",
-                url: "/services/oral-surgery/tooth-extraction",
+                slug: "oral-surgery/tooth-extraction",
                 duration: "30-60 min",
                 price: "₹2,000 - ₹5,000"
               },
               {
                 name: "Sinus Lift",
-                url: "/services/oral-surgery/sinus-lift", 
+                slug: "oral-surgery/sinus-lift",
                 duration: "1-2 hours",
                 price: "₹12,000 - ₹20,000"
               },
               {
                 name: "Dental Implants",
-                url: "/services/dental-implants",
+                slug: "dental-implants",
                 duration: "2-3 hours",
                 price: "₹25,000 - ₹45,000"
               }
