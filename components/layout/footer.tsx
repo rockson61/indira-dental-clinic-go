@@ -20,20 +20,20 @@ import {
 
 const nearbyAreas = {
   velloreLocal: [
-    { name: "Gandhi Nagar", href: "/dentist-near-me/locations/gandhi-nagar-vellore" },
-    { name: "Katpadi", href: "/dentist-near-me/locations/katpadi-vellore" },
-    { name: "Sathuvachari", href: "/dentist-near-me/locations/sathuvachari-vellore" },
-    { name: "Thorapadi", href: "/dentist-near-me/locations/thorapadi-vellore" },
-    { name: "Bagayam", href: "/dentist-near-me/locations/bagayam-vellore" },
-    { name: "Kaspa", href: "/dentist-near-me/locations/kaspa-vellore" },
+    { name: "Gandhi Nagar", href: "/in/tamil-nadu/vellore/gandhi" },
+    { name: "Katpadi", href: "/in/tamil-nadu/vellore/katpadi" },
+    { name: "Sathuvachari", href: "/in/tamil-nadu/vellore/sathuvachari" },
+    { name: "Thorapadi", href: "/in/tamil-nadu/vellore/thorapadi" },
+    { name: "Bagayam", href: "/in/tamil-nadu/vellore/bagayam" },
+    { name: "Kaspa", href: "/in/tamil-nadu/vellore/kaspa" },
   ],
   nearbyDistricts: [
-    { name: "Vellore District", href: "/dentist-near-me/locations/vellore" },
-    { name: "Ranipet", href: "/dentist-near-me/locations/ranipet" },
-    { name: "Tirupattur", href: "/dentist-near-me/locations/tirupattur" },
-    { name: "Tiruvannamalai", href: "/dentist-near-me/locations/tiruvannamalai" },
-    { name: "Kanchipuram", href: "/dentist-near-me/locations/kanchipuram" },
-    { name: "Chittoor (AP)", href: "/dentist-near-me/locations/chittoor" },
+    { name: "Vellore District", href: "/in/tamil-nadu/vellore" },
+    { name: "Ranipet", href: "/in/tamil-nadu/ranipet" },
+    { name: "Tirupattur", href: "/in/tamil-nadu/tirupattur" },
+    { name: "Tiruvannamalai", href: "/in/tamil-nadu/tiruvannamalai" },
+    { name: "Kanchipuram", href: "/in/tamil-nadu/kanchipuram" },
+    { name: "Chittoor (AP)", href: "/in/andhra-pradesh/chittoor" },
   ],
   internationalPatients: [
     { name: "Dental Tourism India", href: "/international-patients" },

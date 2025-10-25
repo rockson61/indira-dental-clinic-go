@@ -116,7 +116,10 @@ const sitemapStructure = {
   ],
   locations: [
     { name: 'Find Dentist Near Me', href: '/dentist-near-me' },
-    { name: 'Vellore Locations', href: '/dentist-near-me/locations' },
+    { name: 'Vellore District', href: '/in/tamil-nadu/vellore' },
+    { name: 'Gandhi Nagar, Vellore', href: '/in/tamil-nadu/vellore/gandhi' },
+    { name: 'Katpadi, Vellore', href: '/in/tamil-nadu/vellore/katpadi' },
+    { name: 'Tamil Nadu Locations', href: '/in/tamil-nadu' },
   ],
   international: [
     { name: 'International Patients - Dental Tourism', href: '/international-patients', badge: 'New' },
