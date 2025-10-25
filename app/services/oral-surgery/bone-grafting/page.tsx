@@ -474,13 +474,15 @@ export default function BoneGraftingPage() {
             description="Don't let insufficient bone prevent you from getting dental implants. Schedule a consultation with Dr. Rockson Samuel to discuss bone grafting options."
             primaryAction={{
               text: "Schedule Consultation",
-              url: "/contact"
+              href: "/contact",
+              icon: Calendar
             }}
             secondaryAction={{
               text: "Ask a Question",
-              url: "/ask-the-dentist/submit"
+              href: "/ask-the-dentist/submit",
+              icon: MessageCircle
             }}
-            features={[
+            benefits={[
               "Advanced grafting techniques",
               "Multiple graft options",
               "Comprehensive follow-up",
