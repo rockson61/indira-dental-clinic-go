@@ -6,6 +6,7 @@ import { AskQuestionButton } from '@/components/ask-dentist/ask-question-button'
 import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from '@/components/ui/modern-card'
 import { Badge } from '@/components/ui/badge'
 import { Breadcrumb } from '@/components/ui/breadcrumb'
+import { AskDentistSchema } from '@/components/schema/AskDentistSchema'
 import { MessageCircle, Users, TrendingUp, Clock, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -38,15 +39,17 @@ export default function AskTheDentistPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-50">
-      <div className="container mx-auto px-4 py-12">
-        {/* Breadcrumb */}
-        <Breadcrumb
-          items={[
-            { label: 'Home', href: '/' },
-            { label: 'Ask the Dentist', href: '/ask-the-dentist' },
-          ]}
-        />
+    <>
+      <AskDentistSchema />
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-50">
+        <div className="container mx-auto px-4 py-12">
+          {/* Breadcrumb */}
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Ask the Dentist', href: '/ask-the-dentist' },
+            ]}
+          />
 
         {/* Hero Section */}
         <section className="text-center mb-12">
@@ -117,5 +120,6 @@ export default function AskTheDentistPage() {
         </section>
       </div>
     </div>
+    </>
   )
 }

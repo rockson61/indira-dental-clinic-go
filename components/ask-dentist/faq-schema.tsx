@@ -51,20 +51,23 @@ export function FAQSchema({ question }: FAQSchemaProps) {
     "mainEntity": faqItems,
     "author": {
       "@type": "Person",
+      "@id": "https://www.dentalclinicinvellore.in/#person-drrocksonsam uel",
       "name": "Dr. Rockson Samuel",
-      "jobTitle": "Dentist",
+      "jobTitle": "General Dentist and Community Leader",
       "worksFor": {
         "@type": "Organization",
+        "@id": "https://www.dentalclinicinvellore.in/#organization",
         "name": "Indira Dental Clinic"
       }
     },
     "publisher": {
       "@type": "Organization",
+      "@id": "https://www.dentalclinicinvellore.in/#organization",
       "name": "Indira Dental Clinic",
       "url": "https://www.dentalclinicinvellore.in",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.dentalclinicinvellore.in/logo.png"
+        "url": "https://lh3.googleusercontent.com/K8lcq6RY2okp3bLpMSdwccD1j-Xdpy4eY07_YEb1jHr-JXcAyKfOAji1C2SWkQ5hwCF3BJD1_1581Td1=s0"
       }
     },
     "datePublished": question.createdAt,
@@ -73,6 +76,15 @@ export function FAQSchema({ question }: FAQSchemaProps) {
       "@type": "InteractionCounter",
       "interactionType": "https://schema.org/ReadAction",
       "userInteractionCount": question.views
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Dental Health",
+      "description": "Expert dental advice and treatment information"
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".question-answer"]
     }
   }
 
