@@ -1,0 +1,4 @@
+/international-patients
+/international-patients/accommodation
+/international-patients/packages
+/international-patients/travel

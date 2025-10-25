@@ -1,0 +1,6 @@
+/conditions
+/conditions/bad-breath
+/conditions/dry-mouth
+/conditions/gum-disease
+/conditions/tooth-decay
+/conditions/tooth-sensitivity

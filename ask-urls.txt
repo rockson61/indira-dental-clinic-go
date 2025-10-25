@@ -1,0 +1,2 @@
+/ask-the-dentist
+/ask-the-dentist/submit
