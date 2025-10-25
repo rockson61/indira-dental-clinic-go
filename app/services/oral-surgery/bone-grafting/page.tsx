@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://indiradentalclinic.com/services/oral-surgery/bone-grafting',
+    canonical: 'https://www.dentalclinicinvellore.in/services/oral-surgery/bone-grafting',
   },
 }
 
@@ -425,39 +425,42 @@ export default function BoneGraftingPage() {
             </ModernCardContent>
           </ModernCard>
 
-          {/* Internal Linking Widgets */}
-          <RelevantQAWidget 
-            title="Related Dental Questions"
-            questions={[
-              {
-                id: "q1",
-                title: "What Should I Expect After Tooth Extraction?",
-                slug: "tooth-extraction-recovery-care",
-                excerpt: "Learn about the recovery process and care instructions after tooth extraction to ensure proper healing.",
-                helpfulVotes: 63,
-                views: 850,
-                createdAt: "2024-02-10T10:00:00Z"
-              },
-              {
-                id: "q2",
-                title: "What are Dental Implants and How Long Do They Last?",
-                slug: "dental-implants-longevity-benefits",
-                excerpt: "Discover the longevity and benefits of dental implants as a permanent tooth replacement solution.",
-                helpfulVotes: 67,
-                views: 1200,
-                createdAt: "2024-02-08T10:00:00Z"
-              },
-              {
-                id: "q3",
-                title: "What is All-on-4 Dental Implants and Who is a Candidate?",
-                slug: "all-on-4-dental-implants-candidacy",
-                excerpt: "Learn about All-on-4 dental implants and whether you're a suitable candidate for this procedure.",
-                helpfulVotes: 49,
-                views: 680,
-                createdAt: "2024-02-05T10:00:00Z"
-              }
-            ]}
-          />
+          {/* Related Questions - Coming Soon */}
+          <ModernCard className="bg-gradient-to-br from-teal-50 to-blue-50 border-teal-200">
+            <ModernCardHeader>
+              <ModernCardTitle className="flex items-center gap-3">
+                <MessageCircle className="w-6 h-6 text-teal-600" />
+                Related Dental Questions
+              </ModernCardTitle>
+            </ModernCardHeader>
+            <ModernCardContent>
+              <div className="space-y-3">
+                <div className="p-4 bg-white rounded-lg border border-gray-200">
+                  <Link href="/ask-the-dentist/tooth-extraction-recovery-care" className="block hover:text-teal-600">
+                    <h4 className="font-semibold text-sm mb-1">What Should I Expect After Tooth Extraction?</h4>
+                    <p className="text-xs text-gray-600">Learn about recovery and care instructions for proper healing.</p>
+                  </Link>
+                </div>
+                <div className="p-4 bg-white rounded-lg border border-gray-200">
+                  <Link href="/ask-the-dentist/dental-implants-longevity-benefits" className="block hover:text-teal-600">
+                    <h4 className="font-semibold text-sm mb-1">How Long Do Dental Implants Last?</h4>
+                    <p className="text-xs text-gray-600">Discover the longevity and benefits of dental implants.</p>
+                  </Link>
+                </div>
+                <div className="p-4 bg-white rounded-lg border border-gray-200">
+                  <Link href="/ask-the-dentist/all-on-4-dental-implants-candidacy" className="block hover:text-teal-600">
+                    <h4 className="font-semibold text-sm mb-1">What is All-on-4 Dental Implants?</h4>
+                    <p className="text-xs text-gray-600">Learn about All-on-4 implants and candidacy requirements.</p>
+                  </Link>
+                </div>
+              </div>
+              <div className="mt-4 text-center">
+                <Link href="/ask-the-dentist" className="text-sm font-semibold text-teal-600 hover:text-teal-700">
+                  View All Questions →
+                </Link>
+              </div>
+            </ModernCardContent>
+          </ModernCard>
 
           <CompactServiceWidget 
             title="Related Oral Surgery Services"
