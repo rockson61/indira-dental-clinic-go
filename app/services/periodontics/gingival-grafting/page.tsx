@@ -6,8 +6,6 @@ import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
 import { GlassCard } from '@/components/ui/glass-card'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
-import { CompactServiceWidget } from '@/components/widgets/compact-service-widget'
-import { CTAWidget } from '@/components/widgets/cta-widget'
 import { 
   Calendar, 
   Clock, 
@@ -477,48 +475,99 @@ export default function GingivalGraftingPage() {
             </ModernCardContent>
           </ModernCard>
 
-          <CompactServiceWidget 
-            services={[
-              {
-                name: "Scaling and Root Planing",
-                url: "/services/periodontics/scaling-root-planing",
-                duration: "1-2 hours",
-                price: "₹3,000 - ₹6,000"
-              },
-              {
-                name: "Pocket Reduction Surgery",
-                url: "/services/periodontics/pocket-reduction-surgery", 
-                duration: "1-3 hours",
-                price: "₹8,000 - ₹25,000"
-              },
-              {
-                name: "Periodontal Maintenance",
-                url: "/services/periodontics",
-                duration: "30-60 min",
-                price: "₹1,500 - ₹3,000"
-              }
-            ]}
-          />
+          {/* Related Services */}
+          <ModernCard className="p-6 bg-gradient-to-br from-white to-gray-50 border border-gray-200 shadow-lg">
+            <ModernCardHeader>
+              <ModernCardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                Related Periodontal Services
+              </ModernCardTitle>
+            </ModernCardHeader>
+            <ModernCardContent>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <h3 className="font-semibold text-gray-800 mb-2">Scaling and Root Planing</h3>
+                  <p className="text-gray-600 text-sm mb-2">Deep cleaning procedure to remove plaque and tartar</p>
+                  <div className="flex justify-between text-sm text-gray-500">
+                    <span>1-2 hours</span>
+                    <span>₹3,000 - ₹6,000</span>
+                  </div>
+                  <Button variant="outline" size="sm" className="w-full mt-3" asChild>
+                    <a href="/services/periodontics/scaling-root-planing">Learn More</a>
+                  </Button>
+                </div>
+                
+                <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <h3 className="font-semibold text-gray-800 mb-2">Pocket Reduction Surgery</h3>
+                  <p className="text-gray-600 text-sm mb-2">Surgical procedure to reduce periodontal pockets</p>
+                  <div className="flex justify-between text-sm text-gray-500">
+                    <span>1-3 hours</span>
+                    <span>₹8,000 - ₹25,000</span>
+                  </div>
+                  <Button variant="outline" size="sm" className="w-full mt-3" asChild>
+                    <a href="/services/periodontics/pocket-reduction-surgery">Learn More</a>
+                  </Button>
+                </div>
+                
+                <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <h3 className="font-semibold text-gray-800 mb-2">Periodontal Maintenance</h3>
+                  <p className="text-gray-600 text-sm mb-2">Ongoing care to maintain gum health</p>
+                  <div className="flex justify-between text-sm text-gray-500">
+                    <span>30-60 min</span>
+                    <span>₹1,500 - ₹3,000</span>
+                  </div>
+                  <Button variant="outline" size="sm" className="w-full mt-3" asChild>
+                    <a href="/services/periodontics">Learn More</a>
+                  </Button>
+                </div>
+              </div>
+            </ModernCardContent>
+          </ModernCard>
 
           {/* CTA Section */}
-          <CTAWidget 
-            title="Concerned About Gum Recession?"
-            description="Don't let gum recession progress. Schedule a consultation with Dr. Rockson Samuel to discuss gingival grafting and restore your gum health."
-            primaryAction={{
-              text: "Schedule Consultation",
-              url: "/contact"
-            }}
-            secondaryAction={{
-              text: "Ask a Question",
-              url: "/ask-the-dentist/submit"
-            }}
-            features={[
-              "Advanced grafting techniques",
-              "Natural-looking results",
-              "Comprehensive follow-up",
-              "Long-term gum health"
-            ]}
-          />
+          <ModernCard className="p-8 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
+            <ModernCardHeader className="text-center">
+              <ModernCardTitle className="text-3xl font-bold mb-4">
+                Concerned About Gum Recession?
+              </ModernCardTitle>
+              <p className="text-teal-100 text-lg mb-6">
+                Don't let gum recession progress. Schedule a consultation with Dr. Rockson Samuel to discuss gingival grafting and restore your gum health.
+              </p>
+            </ModernCardHeader>
+            <ModernCardContent className="text-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <Button size="lg" variant="secondary" asChild>
+                  <a href="/contact">
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Schedule Consultation
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-teal-600" asChild>
+                  <a href="/ask-the-dentist/submit">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Ask a Question
+                  </a>
+                </Button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                <div className="flex items-center justify-center">
+                  <CheckCircle className="h-5 w-5 mr-2" />
+                  <span className="text-sm">Advanced grafting techniques</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <CheckCircle className="h-5 w-5 mr-2" />
+                  <span className="text-sm">Natural-looking results</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <CheckCircle className="h-5 w-5 mr-2" />
+                  <span className="text-sm">Comprehensive follow-up</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <CheckCircle className="h-5 w-5 mr-2" />
+                  <span className="text-sm">Long-term gum health</span>
+                </div>
+              </div>
+            </ModernCardContent>
+          </ModernCard>
 
           {/* Structured Data */}
           <script
