@@ -5,10 +5,6 @@ import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
-import { GlassCard } from '@/components/ui/glass-card'
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
-import { CompactServiceWidget } from '@/components/widgets/compact-service-widget'
-import { CTAWidget } from '@/components/widgets/cta-widget'
 import { 
   Calendar, 
   Clock, 
@@ -16,20 +12,18 @@ import {
   Shield, 
   Star, 
   CheckCircle, 
-  AlertTriangle,
-  ArrowRight,
   Phone,
-  MapPin,
-  MessageCircle
+  MessageCircle,
+  ArrowRight
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Bone Grafting | Oral Surgery | Indira Dental Clinic',
-  description: 'Bone grafting is a surgical procedure to rebuild lost bone structure in the jaw. Learn about the procedure, benefits, and recovery for dental implants.',
-  keywords: 'bone grafting, oral surgery, jaw bone loss, dental implants, bone regeneration, Vellore dentist',
+  title: 'Bone Grafting | Oral Surgery | Indira Dental Clinic Vellore',
+  description: 'Expert bone grafting procedures in Vellore by Dr. Rockson Samuel. Restore jaw bone for dental implants. Advanced techniques with 95% success rate.',
+  keywords: 'bone grafting vellore, oral surgery, jaw bone reconstruction, dental implants preparation, Dr Rockson Samuel',
   openGraph: {
     title: 'Bone Grafting | Oral Surgery | Indira Dental Clinic',
-    description: 'Bone grafting is a surgical procedure to rebuild lost bone structure in the jaw.',
+    description: 'Expert bone grafting for dental implants. Advanced techniques by Dr. Rockson Samuel in Vellore.',
     type: 'website',
   },
   alternates: {
@@ -53,12 +47,13 @@ export default function BoneGraftingPage() {
 
       <SectionContainer className="py-8">
         <div className="max-w-4xl mx-auto">
+          {/* Hero Section */}
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-teal-100 text-teal-700 border-teal-200">
               Oral Surgery
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Bone Grafting
+              Bone Grafting for Dental Implants
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               Restore lost bone structure in your jaw with advanced bone grafting procedures to support dental implants and improve oral health.
@@ -137,410 +132,249 @@ export default function BoneGraftingPage() {
               </ModernCardTitle>
             </ModernCardHeader>
             <ModernCardContent>
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 mb-3">Autograft (Your Own Bone)</h3>
-                    <p className="text-gray-600 text-sm mb-4">Bone taken from another part of your body, typically the chin, hip, or tibia.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• Highest success rate</li>
-                      <li>• No risk of rejection</li>
-                      <li>• Contains living cells</li>
-                      <li>• Cost: ₹15,000 - ₹25,000</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 mb-3">Allograft (Donor Bone)</h3>
-                    <p className="text-gray-600 text-sm mb-4">Processed bone from human donors, thoroughly sterilized and safe.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• No second surgical site</li>
-                      <li>• Good success rate</li>
-                      <li>• Readily available</li>
-                      <li>• Cost: ₹8,000 - ₹15,000</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 mb-3">Xenograft (Animal Bone)</h3>
-                    <p className="text-gray-600 text-sm mb-4">Bone from animals, usually bovine, processed to be biocompatible.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• No donor site needed</li>
-                      <li>• Good structural support</li>
-                      <li>• Cost-effective</li>
-                      <li>• Cost: ₹6,000 - ₹12,000</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 mb-3">Alloplast (Synthetic)</h3>
-                    <p className="text-gray-600 text-sm mb-4">Synthetic materials like hydroxyapatite or calcium phosphate.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• No disease transmission risk</li>
-                      <li>• Predictable results</li>
-                      <li>• Easy to handle</li>
-                      <li>• Cost: ₹5,000 - ₹10,000</li>
-                    </ul>
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 mb-3">Autograft (Your Own Bone)</h3>
+                  <p className="text-gray-600 text-sm mb-4">Bone taken from another part of your body.</p>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>• Highest success rate (95%+)</li>
+                    <li>• No risk of rejection</li>
+                    <li>• Contains living cells</li>
+                    <li>• Cost: ₹15,000 - ₹25,000</li>
+                  </ul>
                 </div>
-
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-4">Choosing the Right Graft Type</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <h4 className="font-medium text-gray-800 mb-2">Autograft - Best For:</h4>
-                      <ul className="space-y-1 text-gray-600">
-                        <li>• Large bone defects</li>
-                        <li>• Complex reconstructions</li>
-                        <li>• Patients wanting best results</li>
-                        <li>• Multiple implant sites</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-800 mb-2">Allograft/Xenograft - Best For:</h4>
-                      <ul className="space-y-1 text-gray-600">
-                        <li>• Smaller defects</li>
-                        <li>• Single implant sites</li>
-                        <li>• Patients wanting convenience</li>
-                        <li>• Cost-conscious patients</li>
-                      </ul>
-                    </div>
-                  </div>
+                
+                <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 mb-3">Allograft (Donor Bone)</h3>
+                  <p className="text-gray-600 text-sm mb-4">Processed bone from human donors, thoroughly sterilized.</p>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>• No second surgical site</li>
+                    <li>• Good success rate (85-90%)</li>
+                    <li>• Readily available</li>
+                    <li>• Cost: ₹8,000 - ₹15,000</li>
+                  </ul>
+                </div>
+                
+                <div className="p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 mb-3">Xenograft (Animal Bone)</h3>
+                  <p className="text-gray-600 text-sm mb-4">Bone from animals, processed to be biocompatible.</p>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>• No donor site needed</li>
+                    <li>• Good structural support</li>
+                    <li>• Cost-effective option</li>
+                    <li>• Cost: ₹6,000 - ₹12,000</li>
+                  </ul>
+                </div>
+                
+                <div className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 mb-3">Alloplast (Synthetic)</h3>
+                  <p className="text-gray-600 text-sm mb-4">Synthetic materials like hydroxyapatite.</p>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>• No disease transmission risk</li>
+                    <li>• Predictable results</li>
+                    <li>• Easy to handle</li>
+                    <li>• Cost: ₹5,000 - ₹10,000</li>
+                  </ul>
                 </div>
               </div>
             </ModernCardContent>
           </ModernCard>
 
-          {/* Procedure Steps */}
-          <ModernCard className="mb-8">
-            <ModernCardHeader>
-              <ModernCardTitle className="flex items-center gap-3">
-                <Calendar className="w-6 h-6 text-teal-600" />
-                Bone Grafting Procedure
-              </ModernCardTitle>
-            </ModernCardHeader>
-            <ModernCardContent>
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="text-center p-4 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg">
-                    <div className="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold">
-                      1
-                    </div>
-                    <h3 className="font-semibold text-gray-900 mb-2 text-sm">Preparation</h3>
-                    <p className="text-xs text-gray-600">Anesthesia and site preparation</p>
-                  </div>
-                  
-                  <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
-                    <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold">
-                      2
-                    </div>
-                    <h3 className="font-semibold text-gray-900 mb-2 text-sm">Graft Placement</h3>
-                    <p className="text-xs text-gray-600">Bone graft material positioned</p>
-                  </div>
-                  
-                  <div className="text-center p-4 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg">
-                    <div className="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold">
-                      3
-                    </div>
-                    <h3 className="font-semibold text-gray-900 mb-2 text-sm">Membrane</h3>
-                    <p className="text-xs text-gray-600">Protective membrane placed</p>
-                  </div>
-                  
-                  <div className="text-center p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
-                    <div className="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold">
-                      4
-                    </div>
-                    <h3 className="font-semibold text-gray-900 mb-2 text-sm">Closure</h3>
-                    <p className="text-xs text-gray-600">Surgical site closed</p>
-                  </div>
-                </div>
-
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-blue-800 mb-3">Detailed Procedure Steps</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                        1
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-800 mb-1">Anesthesia and Incision</h4>
-                        <p className="text-sm text-gray-600">Local anesthesia is administered, and a small incision is made in the gum tissue to access the bone.</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                        2
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-800 mb-1">Site Preparation</h4>
-                        <p className="text-sm text-gray-600">The bone site is prepared by cleaning and creating space for the graft material.</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                        3
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-800 mb-1">Graft Placement</h4>
-                        <p className="text-sm text-gray-600">The selected bone graft material is placed in the prepared site and shaped as needed.</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                        4
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-800 mb-1">Membrane and Closure</h4>
-                        <p className="text-sm text-gray-600">A protective membrane is placed over the graft, and the gum tissue is sutured closed.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ModernCardContent>
-          </ModernCard>
-
-          {/* Recovery */}
+          {/* Recovery Timeline */}
           <ModernCard className="mb-8">
             <ModernCardHeader>
               <ModernCardTitle className="flex items-center gap-3">
                 <Clock className="w-6 h-6 text-teal-600" />
-                Recovery and Healing
+                Recovery and Healing Timeline
               </ModernCardTitle>
             </ModernCardHeader>
             <ModernCardContent>
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="text-center p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg">
-                    <Clock className="w-8 h-8 text-teal-600 mx-auto mb-3" />
-                    <h3 className="font-semibold text-gray-900 mb-2">Initial Healing</h3>
-                    <p className="text-sm text-gray-600 mb-3">First 1-2 weeks</p>
-                    <ul className="text-xs text-gray-600 space-y-1">
-                      <li>• Swelling and discomfort</li>
-                      <li>• Soft diet recommended</li>
-                      <li>• Avoid smoking</li>
-                      <li>• Take prescribed medications</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
-                    <Clock className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                    <h3 className="font-semibold text-gray-900 mb-2">Bone Integration</h3>
-                    <p className="text-sm text-gray-600 mb-3">3-6 months</p>
-                    <ul className="text-xs text-gray-600 space-y-1">
-                      <li>• Gradual bone formation</li>
-                      <li>• Regular follow-up visits</li>
-                      <li>• X-rays to monitor progress</li>
-                      <li>• Return to normal diet</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg">
-                    <Clock className="w-8 h-8 text-indigo-600 mx-auto mb-3" />
-                    <h3 className="font-semibold text-gray-900 mb-2">Complete Healing</h3>
-                    <p className="text-sm text-gray-600 mb-3">6-12 months</p>
-                    <ul className="text-xs text-gray-600 space-y-1">
-                      <li>• Full bone integration</li>
-                      <li>• Ready for implants</li>
-                      <li>• Final assessment</li>
-                      <li>• Long-term maintenance</li>
-                    </ul>
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg">
+                  <Clock className="w-8 h-8 text-teal-600 mx-auto mb-3" />
+                  <h3 className="font-semibold text-gray-900 mb-2">Week 1-2</h3>
+                  <p className="text-sm text-gray-600 mb-3">Initial Healing</p>
+                  <ul className="text-xs text-gray-600 space-y-1 text-left">
+                    <li>• Swelling and discomfort</li>
+                    <li>• Soft diet recommended</li>
+                    <li>• Prescribed medications</li>
+                  </ul>
                 </div>
-
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-green-800 mb-3">Post-Surgical Care Instructions</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <h4 className="font-medium text-green-800 mb-2">Do's</h4>
-                      <ul className="space-y-1 text-green-700">
-                        <li>• Take prescribed antibiotics</li>
-                        <li>• Use ice packs for swelling</li>
-                        <li>• Maintain soft diet initially</li>
-                        <li>• Keep follow-up appointments</li>
-                        <li>• Practice gentle oral hygiene</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-green-800 mb-2">Don'ts</h4>
-                      <ul className="space-y-1 text-green-700">
-                        <li>• Avoid smoking or tobacco</li>
-                        <li>• Don't rinse vigorously</li>
-                        <li>• Avoid hard or crunchy foods</li>
-                        <li>• Don't skip medications</li>
-                        <li>• Avoid strenuous activities</li>
-                      </ul>
-                    </div>
-                  </div>
+                
+                <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
+                  <Clock className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                  <h3 className="font-semibold text-gray-900 mb-2">Month 3-6</h3>
+                  <p className="text-sm text-gray-600 mb-3">Bone Integration</p>
+                  <ul className="text-xs text-gray-600 space-y-1 text-left">
+                    <li>• Gradual bone formation</li>
+                    <li>• Regular follow-ups</li>
+                    <li>• X-ray monitoring</li>
+                  </ul>
+                </div>
+                
+                <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg">
+                  <Clock className="w-8 h-8 text-indigo-600 mx-auto mb-3" />
+                  <h3 className="font-semibold text-gray-900 mb-2">Month 6-12</h3>
+                  <p className="text-sm text-gray-600 mb-3">Complete Healing</p>
+                  <ul className="text-xs text-gray-600 space-y-1 text-left">
+                    <li>• Full bone integration</li>
+                    <li>• Ready for implants</li>
+                    <li>• Long-term success</li>
+                  </ul>
                 </div>
               </div>
             </ModernCardContent>
           </ModernCard>
 
-          {/* FAQ Section */}
+          {/* Related Services */}
           <ModernCard className="mb-8">
             <ModernCardHeader>
-              <ModernCardTitle>Frequently Asked Questions</ModernCardTitle>
+              <ModernCardTitle>Related Oral Surgery Services</ModernCardTitle>
             </ModernCardHeader>
             <ModernCardContent>
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="pain">
-                  <AccordionTrigger>Is bone grafting painful?</AccordionTrigger>
-                  <AccordionContent>
-                    The procedure is performed under local anesthesia, so you won't feel pain during surgery. Some discomfort and swelling are normal after the procedure, but this is manageable with prescribed pain medication and typically resolves within a few days.
-                  </AccordionContent>
-                </AccordionItem>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Link href="/services/oral-surgery/sinus-lift" className="p-4 bg-white rounded-lg border border-gray-200 hover:border-teal-300 transition-all hover:shadow-md">
+                  <h4 className="font-semibold text-gray-900 mb-2">Sinus Lift</h4>
+                  <p className="text-sm text-gray-600 mb-3">Upper jaw bone augmentation</p>
+                  <div className="text-xs text-teal-600 font-semibold">₹12,000 - ₹20,000</div>
+                </Link>
                 
-                <AccordionItem value="duration">
-                  <AccordionTrigger>How long does bone grafting take?</AccordionTrigger>
-                  <AccordionContent>
-                    The procedure typically takes 1-2 hours, depending on the size of the graft and complexity of the case. More extensive grafts may require longer surgery time.
-                  </AccordionContent>
-                </AccordionItem>
+                <Link href="/services/dental-implants" className="p-4 bg-white rounded-lg border border-gray-200 hover:border-teal-300 transition-all hover:shadow-md">
+                  <h4 className="font-semibold text-gray-900 mb-2">Dental Implants</h4>
+                  <p className="text-sm text-gray-600 mb-3">Permanent tooth replacement</p>
+                  <div className="text-xs text-teal-600 font-semibold">₹25,000 - ₹45,000</div>
+                </Link>
                 
-                <AccordionItem value="success">
-                  <AccordionTrigger>What is the success rate of bone grafting?</AccordionTrigger>
-                  <AccordionContent>
-                    Bone grafting has a high success rate of 85-95% when performed by experienced oral surgeons. Success depends on proper post-surgical care, good oral hygiene, and regular follow-up appointments.
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="timing">
-                  <AccordionTrigger>How long before I can get dental implants?</AccordionTrigger>
-                  <AccordionContent>
-                    Typically, you need to wait 3-6 months for the bone graft to fully integrate before placing dental implants. This timeline may vary depending on the type of graft and individual healing response.
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="cost">
-                  <AccordionTrigger>What is the cost of bone grafting?</AccordionTrigger>
-                  <AccordionContent>
-                    The cost varies based on the type of graft and size of the defect, typically ranging from ₹5,000 to ₹25,000. We offer flexible payment plans to make treatment affordable.
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </ModernCardContent>
-          </ModernCard>
-
-          {/* Related Questions - Coming Soon */}
-          <ModernCard className="bg-gradient-to-br from-teal-50 to-blue-50 border-teal-200">
-            <ModernCardHeader>
-              <ModernCardTitle className="flex items-center gap-3">
-                <MessageCircle className="w-6 h-6 text-teal-600" />
-                Related Dental Questions
-              </ModernCardTitle>
-            </ModernCardHeader>
-            <ModernCardContent>
-              <div className="space-y-3">
-                <div className="p-4 bg-white rounded-lg border border-gray-200">
-                  <Link href="/ask-the-dentist/tooth-extraction-recovery-care" className="block hover:text-teal-600">
-                    <h4 className="font-semibold text-sm mb-1">What Should I Expect After Tooth Extraction?</h4>
-                    <p className="text-xs text-gray-600">Learn about recovery and care instructions for proper healing.</p>
-                  </Link>
-                </div>
-                <div className="p-4 bg-white rounded-lg border border-gray-200">
-                  <Link href="/ask-the-dentist/dental-implants-longevity-benefits" className="block hover:text-teal-600">
-                    <h4 className="font-semibold text-sm mb-1">How Long Do Dental Implants Last?</h4>
-                    <p className="text-xs text-gray-600">Discover the longevity and benefits of dental implants.</p>
-                  </Link>
-                </div>
-                <div className="p-4 bg-white rounded-lg border border-gray-200">
-                  <Link href="/ask-the-dentist/all-on-4-dental-implants-candidacy" className="block hover:text-teal-600">
-                    <h4 className="font-semibold text-sm mb-1">What is All-on-4 Dental Implants?</h4>
-                    <p className="text-xs text-gray-600">Learn about All-on-4 implants and candidacy requirements.</p>
-                  </Link>
-                </div>
-              </div>
-              <div className="mt-4 text-center">
-                <Link href="/ask-the-dentist" className="text-sm font-semibold text-teal-600 hover:text-teal-700">
-                  View All Questions →
+                <Link href="/services/oral-surgery" className="p-4 bg-white rounded-lg border border-gray-200 hover:border-teal-300 transition-all hover:shadow-md">
+                  <h4 className="font-semibold text-gray-900 mb-2">All Oral Surgery</h4>
+                  <p className="text-sm text-gray-600 mb-3">View all surgical procedures</p>
+                  <div className="text-xs text-teal-600 font-semibold flex items-center">
+                    View More <ArrowRight className="w-3 h-3 ml-1" />
+                  </div>
                 </Link>
               </div>
             </ModernCardContent>
           </ModernCard>
 
-          <CompactServiceWidget 
-            title="Related Oral Surgery Services"
-            description="Explore other oral surgery procedures we offer"
-            services={[
-              {
-                name: "Tooth Extraction",
-                slug: "oral-surgery/tooth-extraction",
-                duration: "30-60 min",
-                price: "₹2,000 - ₹5,000"
-              },
-              {
-                name: "Sinus Lift",
-                slug: "oral-surgery/sinus-lift",
-                duration: "1-2 hours",
-                price: "₹12,000 - ₹20,000"
-              },
-              {
-                name: "Dental Implants",
-                slug: "dental-implants",
-                duration: "2-3 hours",
-                price: "₹25,000 - ₹45,000"
-              }
-            ]}
-          />
-
           {/* CTA Section */}
-          <CTAWidget 
-            title="Need Bone Grafting for Dental Implants?"
-            description="Don't let insufficient bone prevent you from getting dental implants. Schedule a consultation with Dr. Rockson Samuel to discuss bone grafting options."
-            primaryAction={{
-              text: "Schedule Consultation",
-              href: "/contact",
-              icon: Calendar
-            }}
-            secondaryAction={{
-              text: "Ask a Question",
-              href: "/ask-the-dentist/submit",
-              icon: MessageCircle
-            }}
-            benefits={[
-              "Advanced grafting techniques",
-              "Multiple graft options",
-              "Comprehensive follow-up",
-              "High success rates"
-            ]}
-          />
+          <ModernCard className="bg-gradient-to-br from-teal-50 to-blue-50 border-teal-200">
+            <ModernCardContent className="p-8 text-center">
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                Need Bone Grafting for Dental Implants?
+              </h2>
+              <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+                Don't let insufficient bone prevent you from getting dental implants. Schedule a consultation with Dr. Rockson Samuel to discuss bone grafting options.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700">
+                  <Link href="/contact">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Schedule Consultation
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+                
+                <Button asChild size="lg" variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50">
+                  <Link href="https://wa.me/917010650063?text=Hi%20Dr.%20Rockson%20Samuel,%20I%20would%20like%20to%20know%20more%20about%20bone%20grafting%20for%20dental%20implants." target="_blank">
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    WhatsApp Consultation
+                  </Link>
+                </Button>
+              </div>
 
-          {/* Structured Data */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "MedicalProcedure",
-                "name": "Bone Grafting",
-                "description": "Surgical procedure to rebuild lost bone structure in the jaw to support dental implants.",
-                "provider": {
-                  "@type": "DentalClinic",
-                  "name": "Indira Dental Clinic",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "3rd Floor, 54, Katpadi Main Rd, Suthanthira Ponvizha Nagar",
-                    "addressLocality": "Gandhi Nagar, Vellore",
-                    "addressRegion": "Tamil Nadu",
-                    "postalCode": "632006",
-                    "addressCountry": "IN"
-                  },
-                  "telephone": "+917010650063"
-                },
-                "procedureType": "Oral Surgery",
-                "bodyLocation": "Jaw Bone",
-                "preparation": "Comprehensive evaluation and treatment planning",
-                "followup": "Regular follow-up appointments every 4-6 weeks",
-                "risks": "Swelling, discomfort, infection, graft failure"
-              })
-            }}
-          />
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
+                <div className="flex items-center">
+                  <Star className="w-4 h-4 text-yellow-500 mr-1" />
+                  <span>5.0/5 Rating (126 reviews)</span>
+                </div>
+                <div className="flex items-center">
+                  <Shield className="w-4 h-4 text-green-600 mr-1" />
+                  <span>15+ Years Experience</span>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 text-blue-600 mr-1" />
+                  <span>24/7 Emergency Care</span>
+                </div>
+              </div>
+
+              <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                <div className="flex items-center text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                  <span className="text-gray-700">Advanced techniques</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                  <span className="text-gray-700">Multiple graft options</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                  <span className="text-gray-700">95% success rate</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                  <span className="text-gray-700">Follow-up care included</span>
+                </div>
+              </div>
+            </ModernCardContent>
+          </ModernCard>
+
+          {/* Related Questions */}
+          <ModernCard className="bg-white border-gray-200">
+            <ModernCardHeader>
+              <ModernCardTitle className="flex items-center gap-3">
+                <MessageCircle className="w-6 h-6 text-teal-600" />
+                Common Questions About Bone Grafting
+              </ModernCardTitle>
+            </ModernCardHeader>
+            <ModernCardContent>
+              <div className="space-y-4">
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <Link href="/ask-the-dentist" className="block">
+                    <h4 className="font-semibold text-gray-900 mb-2 hover:text-teal-600">
+                      Is bone grafting painful?
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      The procedure is performed under local anesthesia. Some discomfort is normal but manageable with medication.
+                    </p>
+                  </Link>
+                </div>
+                
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <Link href="/ask-the-dentist" className="block">
+                    <h4 className="font-semibold text-gray-900 mb-2 hover:text-teal-600">
+                      How long before I can get dental implants?
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Typically 3-6 months for the bone graft to fully integrate before placing implants.
+                    </p>
+                  </Link>
+                </div>
+                
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <Link href="/ask-the-dentist" className="block">
+                    <h4 className="font-semibold text-gray-900 mb-2 hover:text-teal-600">
+                      What is the success rate of bone grafting?
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Success rate is 85-95% when performed by experienced surgeons with proper post-care.
+                    </p>
+                  </Link>
+                </div>
+
+                <div className="text-center mt-4">
+                  <Link href="/ask-the-dentist" className="inline-flex items-center text-sm font-semibold text-teal-600 hover:text-teal-700">
+                    Ask Dr. Rockson Samuel Your Question
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+            </ModernCardContent>
+          </ModernCard>
+
         </div>
       </SectionContainer>
     </div>
   )
 }
+
