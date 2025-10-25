@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
 import { GlassCard } from '@/components/ui/glass-card'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
-import { RelevantQAWidget } from '@/components/widgets/relevant-qa-widget'
 import { CompactServiceWidget } from '@/components/widgets/compact-service-widget'
 import { CTAWidget } from '@/components/widgets/cta-widget'
 import { 
@@ -424,26 +423,59 @@ export default function GingivalGraftingPage() {
             </ModernCardContent>
           </ModernCard>
 
-          {/* Internal Linking Widgets */}
-          <RelevantQAWidget 
-            questions={[
-              {
-                title: "What is Periodontal Disease and How is it Treated?",
-                url: "/ask-the-dentist/periodontal-disease-treatment",
-                helpfulVotes: 48
-              },
-              {
-                title: "What Causes Receding Gums and How Can They be Treated?",
-                url: "/ask-the-dentist/receding-gums-causes-treatment", 
-                helpfulVotes: 52
-              },
-              {
-                title: "What Causes Tooth Sensitivity and How Can it be Treated?",
-                url: "/ask-the-dentist/tooth-sensitivity-causes-treatment",
-                helpfulVotes: 61
-              }
-            ]}
-          />
+          {/* Related Questions */}
+          <ModernCard className="p-6 bg-gradient-to-br from-white to-gray-50 border border-gray-200 shadow-lg">
+            <ModernCardHeader>
+              <ModernCardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                Related Dental Questions
+              </ModernCardTitle>
+            </ModernCardHeader>
+            <ModernCardContent>
+              <div className="space-y-4">
+                <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <h3 className="font-semibold text-gray-800 mb-2">
+                    What is Periodontal Disease and How is it Treated?
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-3">
+                    Learn about gum disease, its causes, symptoms, and treatment options including scaling, root planing, and surgical procedures.
+                  </p>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href="/ask-the-dentist/periodontal-disease-treatment">
+                      Read Answer <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+                
+                <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <h3 className="font-semibold text-gray-800 mb-2">
+                    What Causes Receding Gums and How Can They be Treated?
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-3">
+                    Discover the causes of gum recession and various treatment options including gum grafting procedures.
+                  </p>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href="/ask-the-dentist/receding-gums-causes-treatment">
+                      Read Answer <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+                
+                <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                  <h3 className="font-semibold text-gray-800 mb-2">
+                    What Causes Tooth Sensitivity and How Can it be Treated?
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-3">
+                    Understand the causes of tooth sensitivity and effective treatment options to reduce discomfort.
+                  </p>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href="/ask-the-dentist/tooth-sensitivity-causes-treatment">
+                      Read Answer <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </ModernCardContent>
+          </ModernCard>
 
           <CompactServiceWidget 
             services={[
