@@ -5,7 +5,8 @@ import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
-import { ServiceReviews, generateServiceReviews } from '@/components/ui/service-reviews'
+import { ServiceReviews } from '@/components/ui/service-reviews'
+import { generateServiceReviews } from '@/lib/review-data'
 import { Calendar, Shield, Star, CheckCircle, Phone, MessageCircle, Zap } from 'lucide-react'
 
 const reviews = generateServiceReviews('All-on-4 Implants', 'dental-implants')

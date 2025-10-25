@@ -9,7 +9,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { GlassPanel } from "@/components/ui/glass-panel"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+import { ServiceReviews } from "@/components/ui/service-reviews"
+import { generateServiceReviews } from "@/lib/review-data"
 
 const reviews = generateServiceReviews('Pediatric Dentistry', 'default')
 

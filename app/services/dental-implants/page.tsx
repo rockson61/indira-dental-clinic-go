@@ -8,7 +8,8 @@ import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { RelevantQAWidget } from "@/components/widgets/relevant-qa-widget"
 import { CompactServiceWidget } from "@/components/widgets/compact-service-widget"
 import { CTAWidget } from "@/components/widgets/cta-widget"
-import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+import { ServiceReviews } from "@/components/ui/service-reviews"
+import { generateServiceReviews } from "@/lib/review-data"
 import { CheckCircle, Clock, Calendar, Phone, DollarSign, Star, Award, Users, Shield, Heart, Zap, TrendingUp, ArrowRight, MapPin, Globe, Target, BookOpen, MessageCircle, Play, Download } from "lucide-react"
 
 const reviews = generateServiceReviews('Dental Implants', 'dental-implants')

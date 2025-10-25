@@ -8,7 +8,8 @@ import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+import { ServiceReviews } from "@/components/ui/service-reviews"
+import { generateServiceReviews } from "@/lib/review-data"
 
 const reviews = generateServiceReviews('General Dentistry', 'default')
 

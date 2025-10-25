@@ -7,7 +7,8 @@ import { GlassCard } from "@/components/ui/glass-card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
-import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+import { ServiceReviews } from "@/components/ui/service-reviews"
+import { generateServiceReviews } from "@/lib/review-data"
 import { RelevantQAWidget } from "@/components/widgets/relevant-qa-widget"
 import { CompactServiceWidget } from "@/components/widgets/compact-service-widget"
 import { CTAWidget } from "@/components/widgets/cta-widget"
@@ -250,38 +251,38 @@ export default function CosmeticDentistryPage() {
           ]}
         />
 
-        {/* Hero Section */}
+      {/* Hero Section */}
         <section className="text-center mb-16">
           <Badge variant="outline" className="mb-4 border-teal-600 text-teal-700 font-semibold">
             Cosmetic Dentistry
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Transform Your Smile with Expert Cosmetic Dentistry
-          </h1>
+            </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Achieve the smile of your dreams with our advanced cosmetic dentistry treatments. From teeth whitening to
+              Achieve the smile of your dreams with our advanced cosmetic dentistry treatments. From teeth whitening to
             complete smile makeovers, <strong className="text-gray-900">Dr. Rockson Samuel</strong> creates beautiful, natural-looking results at{" "}
             <strong className="text-gray-900">60% lower costs</strong> than other cities.
-          </p>
+            </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white font-semibold" asChild>
-              <Link href="tel:7010650063">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now: 7010650063
-              </Link>
-            </Button>
-            <Button
+                <Link href="tel:7010650063">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now: 7010650063
+                </Link>
+              </Button>
+              <Button
               size="lg"
               variant="outline"
               className="border-2 border-teal-600 text-gray-900 hover:bg-teal-50 bg-white font-semibold"
-              asChild
-            >
-              <Link href="/contact">
-                <Calendar className="w-5 h-5 mr-2" />
-                Free Consultation
-              </Link>
-            </Button>
-          </div>
+                asChild
+              >
+                <Link href="/contact">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Free Consultation
+                </Link>
+              </Button>
+            </div>
         </section>
 
         {/* Stats Section */}
@@ -310,85 +311,85 @@ export default function CosmeticDentistryPage() {
           </div>
         </section>
 
-        {/* Services Grid */}
+      {/* Services Grid */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+        <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Cosmetic Dentistry Services</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Discover our comprehensive range of cosmetic treatments designed to enhance your smile's beauty and boost
+            Discover our comprehensive range of cosmetic treatments designed to enhance your smile's beauty and boost
               your confidence at <strong className="text-gray-900">affordable prices</strong>.
-            </p>
-          </div>
+          </p>
+        </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
               <ModernCard
-                key={index}
+              key={index}
                 className="overflow-hidden hover:shadow-2xl transition-all duration-300 group relative h-full"
-              >
-                {service.popular && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white">Popular</Badge>
-                  </div>
-                )}
-                <div className="relative h-48">
-                  <Image
-                    src={service.image || "/placeholder.svg"}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+            >
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-10">
+                  <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white">Popular</Badge>
+                </div>
+              )}
+              <div className="relative h-48">
+                <Image
+                  src={service.image || "/placeholder.svg"}
+                  alt={service.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                   <div className="absolute top-4 left-4">
                     <Badge variant="secondary" className="bg-white/90 text-teal-700">
                       Save {service.savings}
                     </Badge>
                   </div>
-                </div>
+              </div>
                 <div className="p-6 flex flex-col h-full">
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors">
-                    {service.title}
-                  </h3>
+                  {service.title}
+                </h3>
                   <p className="text-gray-600 mb-4 text-sm flex-grow">{service.description}</p>
 
-                  <div className="space-y-2 mb-4">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-2">
+                <div className="space-y-2 mb-4">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-teal-600" />
-                        <span className="text-sm text-gray-600">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-1">
-                      <span className="font-semibold text-teal-600">{service.price}</span>
+                      <span className="text-sm text-gray-600">{feature}</span>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{service.duration}</span>
-                    </div>
-                  </div>
-
-                  <Link
-                    href={service.href}
-                    className="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  ))}
                 </div>
+
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center gap-1">
+                      <span className="font-semibold text-teal-600">{service.price}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-4 h-4" />
+                    <span>{service.duration}</span>
+                  </div>
+                </div>
+
+                <Link
+                  href={service.href}
+                    className="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                >
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
               </ModernCard>
-            ))}
-          </div>
+          ))}
+        </div>
         </section>
 
         {/* Benefits Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+        <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Benefits of Cosmetic Dentistry</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Discover how cosmetic dentistry can improve not just your smile, but your overall quality of life and confidence.
-            </p>
-          </div>
+          </p>
+        </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -410,7 +411,7 @@ export default function CosmeticDentistryPage() {
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               From consultation to completion, we guide you through every step of your smile transformation journey.
             </p>
-          </div>
+                  </div>
 
           <div className="grid md:grid-cols-5 gap-6">
             {process.map((step, index) => (
@@ -448,28 +449,28 @@ export default function CosmeticDentistryPage() {
                 <div className="flex mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
+          ))}
+        </div>
                 <p className="text-gray-700 mb-3">"{testimonial.text}"</p>
                 <div className="text-sm text-gray-500">
                   <span className="font-semibold">{testimonial.treatment}</span>
-                </div>
+        </div>
               </ModernCard>
-            ))}
-          </div>
+          ))}
+        </div>
         </section>
 
-        {/* FAQ Section */}
+      {/* FAQ Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+        <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Get answers to common questions about cosmetic dentistry treatments and our services.
-            </p>
-          </div>
+          </p>
+        </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
-            {faqs.map((faq, index) => (
+        <div className="max-w-4xl mx-auto space-y-6">
+          {faqs.map((faq, index) => (
               <ModernCard key={index} className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-700">{faq.answer}</p>
@@ -559,47 +560,47 @@ export default function CosmeticDentistryPage() {
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </GlassCard>
-          </div>
+        </div>
         </section>
 
-        {/* CTA Section */}
+      {/* CTA Section */}
         <section className="text-center">
           <ModernCard className="p-8 md:p-12 bg-gradient-to-r from-teal-50 to-blue-50 border border-teal-200">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready for Your Dream Smile?</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Schedule a free consultation with Dr. Rockson Samuel to discuss your smile goals and create a personalized
+            Schedule a free consultation with Dr. Rockson Samuel to discuss your smile goals and create a personalized
               treatment plan. Transform your smile at <strong className="text-gray-900">60% lower costs</strong> than other cities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white font-bold" asChild>
                 <Link href="tel:7010650063">
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now: 7010650063
                 </Link>
-              </Button>
-              <Button
+            </Button>
+            <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-teal-600 text-gray-900 hover:bg-teal-50 bg-white font-bold"
-                asChild
-              >
+              asChild
+            >
                 <Link href="/contact">
                   <Calendar className="w-5 h-5 mr-2" />
                   Book Free Consultation
                 </Link>
-              </Button>
+            </Button>
+          </div>
+          <div className="flex items-center justify-center gap-4 mt-6 text-sm text-gray-500">
+            <div className="flex items-center gap-1">
+              <Star className="w-4 h-4 text-yellow-500 fill-current" />
+              <span>4.9/5 Rating</span>
             </div>
-            <div className="flex items-center justify-center gap-4 mt-6 text-sm text-gray-500">
-              <div className="flex items-center gap-1">
-                <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                <span>4.9/5 Rating</span>
-              </div>
-              <span>•</span>
-              <span>Free Consultation</span>
+            <span>•</span>
+            <span>Free Consultation</span>
               <span>•</span>
               <span>60% Cost Savings</span>
-              <span>•</span>
-              <span>Financing Available</span>
+            <span>•</span>
+            <span>Financing Available</span>
             </div>
           </ModernCard>
         </section>
@@ -678,48 +679,48 @@ export default function CosmeticDentistryPage() {
           showAvailability={true}
         />
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalBusiness",
-              name: "Indira Dental Clinic - Cosmetic Dentistry",
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            name: "Indira Dental Clinic - Cosmetic Dentistry",
               description: "Professional cosmetic dentistry services in Vellore including teeth whitening, porcelain veneers, dental bonding, and smile makeovers by Dr. Rockson Samuel.",
-              url: "https://www.dentalclinicinvellore.in/services/cosmetic-dentistry",
-              telephone: "+91 70106 50063",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "3rd Floor, 54, Katpadi Main Rd, Suthanthira Ponvizha Nagar, Gandhi Nagar",
-                addressLocality: "Vellore",
-                addressRegion: "Tamil Nadu",
-                postalCode: "632006",
-                addressCountry: "IN",
+            url: "https://www.dentalclinicinvellore.in/services/cosmetic-dentistry",
+            telephone: "+91 70106 50063",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "3rd Floor, 54, Katpadi Main Rd, Suthanthira Ponvizha Nagar, Gandhi Nagar",
+              addressLocality: "Vellore",
+              addressRegion: "Tamil Nadu",
+              postalCode: "632006",
+              addressCountry: "IN",
+            },
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                opens: "10:00",
+                closes: "20:00",
               },
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                  opens: "10:00",
-                  closes: "20:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "Sunday",
-                  opens: "10:00",
-                  closes: "13:30",
-                },
-              ],
-              medicalSpecialty: "Cosmetic Dentistry",
-              availableService: services.map((service) => ({
-                "@type": "MedicalProcedure",
-                name: service.title,
-                description: service.description,
-              })),
-            }),
-          }}
-        />
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Sunday",
+                opens: "10:00",
+                closes: "13:30",
+              },
+            ],
+            medicalSpecialty: "Cosmetic Dentistry",
+            availableService: services.map((service) => ({
+              "@type": "MedicalProcedure",
+              name: service.title,
+              description: service.description,
+            })),
+          }),
+        }}
+      />
       </div>
     </div>
   )

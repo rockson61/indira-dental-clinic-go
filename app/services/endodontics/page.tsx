@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+import { ServiceReviews } from "@/components/ui/service-reviews"
+import { generateServiceReviews } from "@/lib/review-data"
 import { MessageCircle, ArrowRight } from "lucide-react"
 
 const reviews = generateServiceReviews('Endodontics', 'root-canal')
