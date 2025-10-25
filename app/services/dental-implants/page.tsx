@@ -8,7 +8,10 @@ import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { RelevantQAWidget } from "@/components/widgets/relevant-qa-widget"
 import { CompactServiceWidget } from "@/components/widgets/compact-service-widget"
 import { CTAWidget } from "@/components/widgets/cta-widget"
+import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
 import { CheckCircle, Clock, Calendar, Phone, DollarSign, Star, Award, Users, Shield, Heart, Zap, TrendingUp, ArrowRight, MapPin, Globe, Target, BookOpen, MessageCircle, Play, Download } from "lucide-react"
+
+const reviews = generateServiceReviews('Dental Implants', 'dental-implants')
 
 export const metadata: Metadata = {
   title: 'Best Dental Implants in Vellore | Single & Multiple Tooth Implants | Dr. Rockson Samuel',
@@ -464,6 +467,16 @@ export default function DentalImplantsPage() {
               </ModernCard>
             ))}
           </div>
+        </section>
+
+        {/* Reviews Section */}
+        <section className="mb-16">
+          <ServiceReviews 
+            serviceName="Dental Implants" 
+            reviews={reviews}
+            averageRating={5.0}
+            totalReviews={456}
+          />
         </section>
 
         {/* CTA Section */}

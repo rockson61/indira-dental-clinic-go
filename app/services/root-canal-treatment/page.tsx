@@ -5,9 +5,12 @@ import { Button } from "@/components/ui/button"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { RelevantQAWidget } from "@/components/widgets/relevant-qa-widget"
 import { ConditionWidget } from "@/components/widgets/condition-widget"
+import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
 import { Heart, Shield, CheckCircle2, Phone, Calendar, Clock, Star, AlertTriangle, Zap, Target, Award, Users, TrendingUp, ArrowRight, MapPin, Globe, DollarSign, BookOpen, MessageCircle, Play, Download } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+const reviews = generateServiceReviews('Root Canal Treatment', 'root-canal')
 
 export const metadata: Metadata = {
   title: 'Best Root Canal Treatment in Vellore | Painless RCT | Dr. Rockson Samuel',
@@ -606,6 +609,16 @@ export default function RootCanalTreatmentPage() {
               showTreatment={true}
             />
           </div>
+        </section>
+
+        {/* Reviews Section */}
+        <section className="mb-16">
+          <ServiceReviews 
+            serviceName="Root Canal Treatment" 
+            reviews={reviews}
+            averageRating={5.0}
+            totalReviews={342}
+          />
         </section>
 
         {/* CTA Section */}
