@@ -5,7 +5,10 @@ import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
+import { ServiceReviews, generateServiceReviews } from '@/components/ui/service-reviews'
 import { Calendar, Shield, Star, CheckCircle, Phone, MessageCircle, Activity } from 'lucide-react'
+
+const reviews = generateServiceReviews('Apicoectomy', 'root-canal')
 
 export const metadata: Metadata = {
   title: 'Apicoectomy | Root End Surgery | Indira Dental Clinic Vellore',
@@ -73,13 +76,23 @@ export default function ApicoectomyPage() {
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-red-600 text-red-600">
                   <Link href="https://wa.me/917010650063?text=I%20need%20apicoectomy" target="_blank"><MessageCircle className="w-5 h-5 mr-2" />WhatsApp</Link>
-                </Button>
-              </div>
-            </ModernCardContent>
-          </ModernCard>
+              </Button>
+            </div>
+          </ModernCardContent>
+        </ModernCard>
+
+        {/* Reviews Section */}
+        <div className="mt-8">
+          <ServiceReviews 
+            serviceName="Apicoectomy (Root End Surgery)" 
+            reviews={reviews}
+            averageRating={5.0}
+            totalReviews={89}
+          />
         </div>
-      </SectionContainer>
-    </div>
-  )
+      </div>
+    </SectionContainer>
+  </div>
+)
 }
 

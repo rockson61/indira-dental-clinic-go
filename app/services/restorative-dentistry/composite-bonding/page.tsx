@@ -5,7 +5,10 @@ import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
+import { ServiceReviews, generateServiceReviews } from '@/components/ui/service-reviews'
 import { Calendar, Shield, Star, CheckCircle, Phone, MessageCircle, Sparkles } from 'lucide-react'
+
+const reviews = generateServiceReviews('Composite Bonding', 'default')
 
 export const metadata: Metadata = {
   title: 'Dental Bonding | Tooth Bonding | Indira Dental Clinic Vellore',
@@ -58,13 +61,23 @@ export default function CompositeBondingPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700">
                   <Link href="/contact"><Calendar className="w-5 h-5 mr-2" />Book Bonding</Link>
-                </Button>
-              </div>
-            </ModernCardContent>
-          </ModernCard>
+              </Button>
+            </div>
+          </ModernCardContent>
+        </ModernCard>
+
+        {/* Reviews Section */}
+        <div className="mt-8">
+          <ServiceReviews 
+            serviceName="Composite Bonding" 
+            reviews={reviews}
+            averageRating={5.0}
+            totalReviews={198}
+          />
         </div>
-      </SectionContainer>
-    </div>
-  )
+      </div>
+    </SectionContainer>
+  </div>
+)
 }
 
