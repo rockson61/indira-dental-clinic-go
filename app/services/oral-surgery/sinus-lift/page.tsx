@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/breadcrumb'
 import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from '@/components/ui/modern-card'
 import { Badge } from '@/components/ui/badge'
@@ -6,7 +7,6 @@ import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
 import { GlassCard } from '@/components/ui/glass-card'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
-import { RelevantQAWidget } from '@/components/widgets/relevant-qa-widget'
 import { CompactServiceWidget } from '@/components/widgets/compact-service-widget'
 import { CTAWidget } from '@/components/widgets/cta-widget'
 import { 
@@ -22,7 +22,6 @@ import {
   MapPin,
   MessageCircle
 } from 'lucide-react'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Sinus Lift | Oral Surgery | Indira Dental Clinic',
