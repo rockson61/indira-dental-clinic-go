@@ -5,6 +5,7 @@ import "./globals.css"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { ConnectWithDentist } from "@/components/sections/connect-with-dentist"
+import { GlobalSchema } from "@/components/schema/GlobalSchema"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const exo2 = Exo_2({ 
@@ -100,102 +101,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="format-detection" content="telephone=no" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@id": "https://www.dentalclinicinvellore.in/",
-              "@type": "LocalBusiness",
-              name: "Indira Dental Clinic | Dr Rockson Samuel | Top Dentist in Vellore for RCT, Braces, Implants, & Dental Fillings",
-              description: "Indira Dental Clinic, led by the top dentist Dr. Rockson Samuel in Vellore, Tamil Nadu, offers comprehensive dental care tailored to meet all your oral health needs. Specializing in Root Canal Treatment (RCT), braces for teeth alignment, high-quality dental implants, and precise dental fillings, our clinic is dedicated to providing exceptional dentistry services. We use state-of-the-art technology and advanced techniques in a comfortable and welcoming environment. Whether you seek preventive care or cosmetic enhancements, Indira Dental Clinic ensures personalized attention and effective, high-standard treatments. Visit us for all your dental care needs in Vellore today and smile with confidence!",
-              url: "https://www.dentalclinicinvellore.in/",
-              telephone: "+91 70106 50063",
-              email: "rockson68@hotmail.com",
-              image: "https://lh3.googleusercontent.com/K8lcq6RY2okp3bLpMSdwccD1j-Xdpy4eY07_YEb1jHr-JXcAyKfOAji1C2SWkQ5hwCF3BJD1_1581Td1=s0",
-              hasMap: "https://maps.google.com/maps?cid=14385819900995297414",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "3rd Floor, 54, Katpadi Main Rd, Suthanthira Ponvizha Nagar, Gandhi Nagar",
-                addressLocality: "Vellore",
-                addressRegion: "IN",
-                postalCode: "632006",
-                addressCountry: "IN",
-              },
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "5.0",
-                bestRating: "5",
-                ratingCount: "126",
-              },
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "SUNDAY",
-                  opens: "10:00:00",
-                  closes: "13:30:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "MONDAY",
-                  opens: "10:00:00",
-                  closes: "20:00:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "TUESDAY",
-                  opens: "10:00:00",
-                  closes: "20:00:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "WEDNESDAY",
-                  opens: "10:00:00",
-                  closes: "20:00:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "THURSDAY",
-                  opens: "10:00:00",
-                  closes: "20:00:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "FRIDAY",
-                  opens: "10:00:00",
-                  closes: "20:00:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "SATURDAY",
-                  opens: "10:00:00",
-                  closes: "20:00:00",
-                },
-              ],
-              makesOffer: [
-                { "@type": "Offer", name: "Dental clinic" },
-                { "@type": "Offer", name: "Dentist" },
-                { "@type": "Offer", name: "Endodontist" },
-                { "@type": "Offer", name: "Cosmetic dentist" },
-                { "@type": "Offer", name: "Dental hygienist" },
-                { "@type": "Offer", name: "Dental radiology" },
-                { "@type": "Offer", name: "Paediatric Dentist" },
-                { "@type": "Offer", name: "Dental implants provider" },
-                { "@type": "Offer", name: "Emergency dental service" },
-                { "@type": "Offer", name: "Dental implants periodontist" },
-              ],
-              sameAs: [
-                "https://velloredental.com/",
-                "https://www.dentalclinicinvellore.in/",
-                "https://www.instagram.com/indiradentalvellore/",
-                "https://www.facebook.com/indiradentalclinicvellore/",
-                "https://in.pinterest.com/indradentalclinic/",
-                "https://www.justdial.com/Vellore/Indira-Dental-Clinic-Dr-Rockson-Samuel-Rct-Braces-Implants-Dental-Fillings-Near-Shell-Petrol-Pump-Katpadi-Vellore/9999PX416-X416-240129151733-B2V8_BZDET",
-                "https://dentalreach.today/the-top-10-influencers-of-dentistry/",
-              ],
-            }),
-          }}
-        />
+        <GlobalSchema />
       </head>
       <body className={`${inter.variable} ${exo2.variable} font-sans antialiased`}>
         <Header />
