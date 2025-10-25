@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "name": "indira-dental-clinic",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/index.html",
+      "dest": "/"
+    }
+  ],
+  "regions": ["sin1"],
+  "github": {
+    "silent": true
+  },
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": "https://www.dentalclinicinvellore.in",
+    "NEXT_PUBLIC_PHONE": "7010650063",
+    "NEXT_PUBLIC_WHATSAPP": "917010650063"
+  }
+}
+
