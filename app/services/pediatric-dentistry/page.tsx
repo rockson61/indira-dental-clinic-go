@@ -1,12 +1,17 @@
 import type { Metadata } from "next"
-import { Phone, Clock, MapPin, Star, Heart, Shield, Smile, Baby, Users, Award } from "lucide-react"
+import Link from "next/link"
+import { Phone, Clock, MapPin, Star, Heart, Shield, Smile, Baby, Users, Award, MessageCircle, ArrowRight, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { GlassCard } from "@/components/ui/glass-card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { GlassPanel } from "@/components/ui/glass-panel"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
+import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+
+const reviews = generateServiceReviews('Pediatric Dentistry', 'default')
 
 export const metadata: Metadata = {
   title: "Pediatric Dentistry in Vellore | Children's Dental Care | Indira Dental Clinic",
@@ -368,6 +373,90 @@ export default function PediatricDentistryPage() {
               <p>🕒 Mon-Sat: 10AM-8PM | Sun: 10AM-1:30PM</p>
             </div>
           </GlassPanel>
+        </div>
+      </SectionContainer>
+
+      {/* Reviews Section */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-yellow-50/50 to-orange-50/50">
+        <ServiceReviews 
+          serviceName="Pediatric Dentistry" 
+          reviews={reviews}
+          averageRating={5.0}
+          totalReviews={456}
+        />
+      </SectionContainer>
+
+      {/* Ask the Dentist - Related Questions */}
+      <SectionContainer className="py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Pediatric Dental Questions</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Common questions from parents answered by Dr. Rockson Samuel
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-pink-700">When should my child first visit the dentist?</h3>
+            <p className="text-gray-600 text-sm mb-4">We recommend the first visit by age 1 or when the first tooth appears, whichever comes first.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-pink-700">How to stop thumb sucking?</h3>
+            <p className="text-gray-600 text-sm mb-4">Gentle positive reinforcement and habit-breaking appliances can help stop thumb sucking.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-pink-700">Are dental X-rays safe for kids?</h3>
+            <p className="text-gray-600 text-sm mb-4">Yes, digital X-rays use 80% less radiation and are completely safe when used appropriately.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+        </div>
+        <div className="text-center">
+          <Button asChild size="lg" variant="outline" className="border-pink-600 text-pink-600">
+            <Link href="/ask-the-dentist/submit">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Ask Pediatric Question
+            </Link>
+          </Button>
+        </div>
+      </SectionContainer>
+
+      {/* Related Services */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-pink-50/50 to-purple-50/50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Related Services for Kids</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Complete dental care for your child
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-pink-600 transition-colors">Orthodontics for Kids</h3>
+            <p className="text-gray-600 mb-4">Early orthodontic evaluation and treatment</p>
+            <Link href="/services/orthodontics" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-pink-600 transition-colors">Preventive Care</h3>
+            <p className="text-gray-600 mb-4">Fluoride, sealants, oral hygiene education</p>
+            <Link href="/services/preventive-dentistry" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-pink-600 transition-colors">Emergency Dental Care</h3>
+            <p className="text-gray-600 mb-4">24/7 urgent care for dental emergencies</p>
+            <Link href="/services/emergency-dentistry" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
         </div>
       </SectionContainer>
     </div>
