@@ -19,7 +19,8 @@ import {
   AlertTriangle,
   ArrowRight,
   Phone,
-  MapPin
+  MapPin,
+  MessageCircle
 } from 'lucide-react'
 
 export const metadata: Metadata = {
