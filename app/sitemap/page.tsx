@@ -140,18 +140,27 @@ export default function SitemapPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-teal-50 py-12">
       <SectionContainer>
         <div className="max-w-7xl mx-auto">
+          {/* Complete Sitemap Banner */}
+          <div className="mb-8 p-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg text-center">
+            <h2 className="text-2xl font-bold mb-3">🗺️ Need ALL 588 Pages Including Locations?</h2>
+            <p className="mb-4">This page shows main categories. For complete sitemap with all Indian states, cities, and every service sub-page:</p>
+            <Link href="/complete-sitemap" className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+              View Complete Sitemap (588+ Pages) <ExternalLink className="w-5 h-5" />
+            </Link>
+          </div>
+
           {/* Header */}
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-teal-100 text-teal-700">Complete Navigation</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Complete Website Sitemap</h1>
+            <Badge className="mb-4 bg-teal-100 text-teal-700">Main Navigation</Badge>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Quick Sitemap - Main Pages</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              All pages and services at Indira Dental Clinic. Click any link to navigate. 
-              Test for 404 errors easily.
+              Main pages and services at Indira Dental Clinic. Click any link to navigate. 
+              For ALL 588 pages including locations, see Complete Sitemap above.
             </p>
             <div className="mt-6 flex items-center justify-center gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-600" />
-                <span className="text-gray-600">55+ Pages</span>
+                <span className="text-gray-600">Main Pages Shown</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-600" />
