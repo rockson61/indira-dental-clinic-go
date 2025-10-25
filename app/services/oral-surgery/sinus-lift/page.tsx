@@ -19,8 +19,10 @@ import {
   AlertTriangle,
   ArrowRight,
   Phone,
-  MapPin
+  MapPin,
+  MessageCircle
 } from 'lucide-react'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Sinus Lift | Oral Surgery | Indira Dental Clinic',
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://indiradentalclinic.com/services/oral-surgery/sinus-lift',
+    canonical: 'https://www.dentalclinicinvellore.in/services/oral-surgery/sinus-lift',
   },
 }
 
@@ -424,44 +426,62 @@ export default function SinusLiftPage() {
             </ModernCardContent>
           </ModernCard>
 
-          {/* Internal Linking Widgets */}
-          <RelevantQAWidget 
-            questions={[
-              {
-                title: "What Should I Expect After Tooth Extraction?",
-                url: "/ask-the-dentist/tooth-extraction-recovery-care",
-                helpfulVotes: 63
-              },
-              {
-                title: "What are Dental Implants and How Long Do They Last?",
-                url: "/ask-the-dentist/dental-implants-longevity-benefits", 
-                helpfulVotes: 67
-              },
-              {
-                title: "What is All-on-4 Dental Implants and Who is a Candidate?",
-                url: "/ask-the-dentist/all-on-4-dental-implants-candidacy",
-                helpfulVotes: 49
-              }
-            ]}
-          />
+          {/* Related Questions */}
+          <ModernCard className="bg-gradient-to-br from-teal-50 to-blue-50 border-teal-200 mb-8">
+            <ModernCardHeader>
+              <ModernCardTitle className="flex items-center gap-3">
+                <MessageCircle className="w-6 h-6 text-teal-600" />
+                Related Dental Questions
+              </ModernCardTitle>
+            </ModernCardHeader>
+            <ModernCardContent>
+              <div className="space-y-3">
+                <div className="p-4 bg-white rounded-lg border border-gray-200">
+                  <Link href="/ask-the-dentist/tooth-extraction-recovery-care" className="block hover:text-teal-600">
+                    <h4 className="font-semibold text-sm mb-1">What Should I Expect After Tooth Extraction?</h4>
+                    <p className="text-xs text-gray-600">Learn about recovery and care instructions.</p>
+                  </Link>
+                </div>
+                <div className="p-4 bg-white rounded-lg border border-gray-200">
+                  <Link href="/ask-the-dentist/dental-implants-longevity-benefits" className="block hover:text-teal-600">
+                    <h4 className="font-semibold text-sm mb-1">How Long Do Dental Implants Last?</h4>
+                    <p className="text-xs text-gray-600">Discover implant longevity and benefits.</p>
+                  </Link>
+                </div>
+                <div className="p-4 bg-white rounded-lg border border-gray-200">
+                  <Link href="/ask-the-dentist/all-on-4-dental-implants-candidacy" className="block hover:text-teal-600">
+                    <h4 className="font-semibold text-sm mb-1">What is All-on-4 Dental Implants?</h4>
+                    <p className="text-xs text-gray-600">Learn about All-on-4 implants and candidacy.</p>
+                  </Link>
+                </div>
+              </div>
+              <div className="mt-4 text-center">
+                <Link href="/ask-the-dentist" className="text-sm font-semibold text-teal-600 hover:text-teal-700">
+                  View All Questions →
+                </Link>
+              </div>
+            </ModernCardContent>
+          </ModernCard>
 
           <CompactServiceWidget 
+            title="Related Oral Surgery Services"
+            description="Other oral surgery procedures we offer"
             services={[
               {
                 name: "Tooth Extraction",
-                url: "/services/oral-surgery/tooth-extraction",
+                slug: "oral-surgery/tooth-extraction",
                 duration: "30-60 min",
                 price: "₹2,000 - ₹5,000"
               },
               {
                 name: "Bone Grafting",
-                url: "/services/oral-surgery/bone-grafting", 
+                slug: "oral-surgery/bone-grafting",
                 duration: "1-2 hours",
                 price: "₹5,000 - ₹25,000"
               },
               {
                 name: "Dental Implants",
-                url: "/services/dental-implants",
+                slug: "dental-implants",
                 duration: "2-3 hours",
                 price: "₹25,000 - ₹45,000"
               }
@@ -474,13 +494,15 @@ export default function SinusLiftPage() {
             description="Don't let insufficient bone height prevent you from getting upper jaw dental implants. Schedule a consultation with Dr. Rockson Samuel to discuss sinus lift options."
             primaryAction={{
               text: "Schedule Consultation",
-              url: "/contact"
+              href: "/contact",
+              icon: Calendar
             }}
             secondaryAction={{
               text: "Ask a Question",
-              url: "/ask-the-dentist/submit"
+              href: "/ask-the-dentist/submit",
+              icon: MessageCircle
             }}
-            features={[
+            benefits={[
               "Advanced sinus lift techniques",
               "Multiple procedure options",
               "Comprehensive follow-up",
