@@ -1,8 +1,12 @@
 import type { Metadata } from "next"
 import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from "@/components/ui/modern-card"
+import { GlassCard } from "@/components/ui/glass-card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
+import { ServiceReviews } from "@/components/ui/service-reviews"
+import { generateServiceReviews } from "@/lib/review-data"
+import { SectionContainer } from "@/components/ui/section-container"
 import {
   Stethoscope,
   Smile,
@@ -32,6 +36,8 @@ import {
   Download,
 } from "lucide-react"
 import Link from "next/link"
+
+const reviews = generateServiceReviews('Dental Services', 'default')
 
 export const metadata: Metadata = {
   title: 'Best Dental Services in Vellore | Complete Dental Care | Indira Dental Clinic',
@@ -591,6 +597,57 @@ export default function ServicesPage() {
               </Button>
             </div>
           </ModernCard>
+        </section>
+
+        {/* Reviews Section */}
+        <section className="mb-16">
+          <ServiceReviews 
+            serviceName="All Dental Services" 
+            reviews={reviews}
+            averageRating={5.0}
+            totalReviews={1250}
+          />
+        </section>
+
+        {/* Ask the Dentist */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Have Questions About Our Services?</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Get expert answers from Dr. Rockson Samuel
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-lg font-semibold mb-2 text-teal-700">Which service do I need?</h3>
+              <p className="text-gray-600 text-sm mb-4">Book a consultation for proper diagnosis and personalized treatment planning.</p>
+              <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+                Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </GlassCard>
+            <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-lg font-semibold mb-2 text-teal-700">Do you accept insurance?</h3>
+              <p className="text-gray-600 text-sm mb-4">Yes, we work with most major dental insurance providers. EMI options also available.</p>
+              <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+                Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </GlassCard>
+            <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-lg font-semibold mb-2 text-teal-700">How much do treatments cost?</h3>
+              <p className="text-gray-600 text-sm mb-4">Our prices are 50-60% lower than other cities. Transparent pricing, no hidden costs.</p>
+              <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+                Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </GlassCard>
+          </div>
+          <div className="text-center">
+            <Button asChild size="lg" variant="outline" className="border-teal-600 text-teal-600">
+              <Link href="/ask-the-dentist/submit">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Ask Your Question
+              </Link>
+            </Button>
+          </div>
         </section>
       </div>
     </div>

@@ -8,10 +8,14 @@ import { Breadcrumb } from '@/components/ui/breadcrumb'
 import { SectionContainer } from '@/components/ui/section-container'
 import { GlassCard } from '@/components/ui/glass-card'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
-import { CheckCircle, Clock, Shield, Star, Users, Award, ArrowRight, Phone, Calendar, Heart } from 'lucide-react'
+import { CheckCircle, Clock, Shield, Star, Users, Award, ArrowRight, Phone, Calendar, Heart, MessageCircle } from 'lucide-react'
+import { ServiceReviews } from '@/components/ui/service-reviews'
+import { generateServiceReviews } from '@/lib/review-data'
 import { RelevantQAWidget } from '@/components/widgets/relevant-qa-widget'
 import { CompactServiceWidget } from '@/components/widgets/compact-service-widget'
 import { CTAWidget } from '@/components/widgets/cta-widget'
+
+const reviews = generateServiceReviews('Scaling and Root Planing', 'default')
 
 export const metadata: Metadata = {
   title: 'Scaling and Root Planing in Vellore | Deep Cleaning Treatment | Dr. Rockson Samuel',
@@ -443,6 +447,16 @@ export default function ScalingRootPlaningPage() {
           })
         }}
       />
-      </div>
+
+      {/* Reviews Section */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-yellow-50/50 to-orange-50/50">
+        <ServiceReviews 
+          serviceName="Scaling and Root Planing" 
+          reviews={reviews}
+          averageRating={5.0}
+          totalReviews={215}
+        />
+      </SectionContainer>
+    </div>
   )
 }
