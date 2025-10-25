@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  
+  // Image optimization
   images: {
+    unoptimized: false,
     remotePatterns: [
       {
         protocol: "https",
@@ -15,8 +18,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.dentalclinicinvellore.in",
       },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
     ],
-    // Configure local patterns for Next.js 16 compatibility - allow all local images
     localPatterns: [
       {
         pathname: '/**',
@@ -24,20 +30,26 @@ const nextConfig = {
       },
     ],
   },
-  // Build configuration - Set to true for faster builds, false to catch errors
+  
+  // Build configuration
   typescript: {
-    ignoreBuildErrors: true, // Can be set to false after fixing all type errors
+    ignoreBuildErrors: true,
   },
   eslint: {
-    ignoreDuringBuilds: true, // Can be set to false after fixing all lint warnings
+    ignoreDuringBuilds: true,
   },
-  // Performance optimizations
+  
+  // Performance
   compress: true,
   poweredByHeader: false,
-  // Enable experimental features for better performance
+  
+  // Experimental features
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
+  
+  // Output configuration
+  output: 'standalone',
 }
 
 module.exports = nextConfig
