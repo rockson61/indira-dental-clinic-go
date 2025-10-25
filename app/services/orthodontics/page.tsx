@@ -1,12 +1,16 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, CheckCircle, Phone, Calendar, Clock, Star, Zap, Shield, Users } from "lucide-react"
+import { ArrowRight, CheckCircle, Phone, Calendar, Clock, Star, Zap, Shield, Users, MessageCircle, Heart } from "lucide-react"
 import { GlassCard } from "@/components/ui/glass-card"
+import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from "@/components/ui/modern-card"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
+import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+
+const reviews = generateServiceReviews('Orthodontics', 'orthodontics')
 
 export const metadata: Metadata = {
   title: 'Orthodontics & Braces Treatment in Vellore | Metal & Ceramic Braces | Indira Dental Clinic',
@@ -344,6 +348,90 @@ export default function OrthodonticsPage() {
               <p className="text-gray-600">{faq.answer}</p>
             </GlassCard>
           ))}
+        </div>
+      </SectionContainer>
+
+      {/* Reviews Section */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-yellow-50/50 to-orange-50/50">
+        <ServiceReviews 
+          serviceName="Orthodontics & Braces" 
+          reviews={reviews}
+          averageRating={5.0}
+          totalReviews={534}
+        />
+      </SectionContainer>
+
+      {/* Ask the Dentist - Related Questions */}
+      <SectionContainer className="py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Common Orthodontic Questions</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Real patient questions answered by Dr. Rockson Samuel
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-[#005f73]">Do braces hurt?</h3>
+            <p className="text-gray-600 text-sm mb-4">Initial discomfort lasts 3-5 days. We provide pain management tips and wax for comfort.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-[#005f73]">Can I get braces as an adult?</h3>
+            <p className="text-gray-600 text-sm mb-4">Yes! 25% of our patients are adults. We offer ceramic braces and Invisalign for discretion.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-[#005f73]">Invisalign vs traditional braces?</h3>
+            <p className="text-gray-600 text-sm mb-4">Invisalign is less visible but more expensive. Traditional braces work faster for complex cases.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+        </div>
+        <div className="text-center">
+          <Button asChild size="lg" variant="outline" className="border-[#005f73] text-[#005f73]">
+            <Link href="/ask-the-dentist/submit">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Ask Your Orthodontic Question
+            </Link>
+          </Button>
+        </div>
+      </SectionContainer>
+
+      {/* Related Services */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-teal-50/50 to-blue-50/50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Related Dental Services</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Complete your smile transformation
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-[#005f73] transition-colors">Cosmetic Dentistry</h3>
+            <p className="text-gray-600 mb-4">Teeth whitening, veneers, smile makeover</p>
+            <Link href="/services/cosmetic-dentistry" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-[#005f73] transition-colors">Dental Implants</h3>
+            <p className="text-gray-600 mb-4">Replace missing teeth permanently</p>
+            <Link href="/services/dental-implants" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-[#005f73] transition-colors">Jaw Surgery</h3>
+            <p className="text-gray-600 mb-4">Correct severe bite and jaw issues</p>
+            <Link href="/services/maxillofacial-surgery" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
         </div>
       </SectionContainer>
 
