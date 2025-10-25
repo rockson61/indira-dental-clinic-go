@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: 'Best dentist near perumal nagar, Vellore. Dr. Rockson Samuel - Complete dental care.',
 }
 
-export default function perumal nagarPage() {
+export default function PerumalNagarPage() {
   redirect('/in/tamil-nadu/vellore/gandhi')
 }

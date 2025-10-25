@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: 'Best dentist near r n palayam, Vellore. Dr. Rockson Samuel - Complete dental care.',
 }
 
-export default function r n palayamPage() {
+export default function RNPalayamPage() {
   redirect('/in/tamil-nadu/vellore/gandhi')
 }

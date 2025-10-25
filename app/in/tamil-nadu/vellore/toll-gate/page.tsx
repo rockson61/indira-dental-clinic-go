@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: 'Best dentist near toll gate, Vellore. Dr. Rockson Samuel - Complete dental care.',
 }
 
-export default function toll gatePage() {
+export default function TollGatePage() {
   redirect('/in/tamil-nadu/vellore/gandhi')
 }
