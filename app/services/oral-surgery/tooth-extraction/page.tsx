@@ -5,7 +5,10 @@ import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
+import { ServiceReviews, generateServiceReviews } from '@/components/ui/service-reviews'
 import { Calendar, Clock, Shield, Star, CheckCircle, Phone, MessageCircle, AlertTriangle } from 'lucide-react'
+
+const reviews = generateServiceReviews('Tooth Extraction', 'default')
 
 export const metadata: Metadata = {
   title: 'Tooth Extraction | Painless Removal | Indira Dental Clinic Vellore',
@@ -96,6 +99,16 @@ export default function ToothExtractionPage() {
               </div>
             </ModernCardContent>
           </ModernCard>
+
+          {/* Reviews Section */}
+          <div className="mt-8">
+            <ServiceReviews 
+              serviceName="Tooth Extraction" 
+              reviews={reviews}
+              averageRating={5.0}
+              totalReviews={412}
+            />
+          </div>
         </div>
       </SectionContainer>
     </div>

@@ -5,7 +5,10 @@ import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
+import { ServiceReviews, generateServiceReviews } from '@/components/ui/service-reviews'
 import { Calendar, Shield, Star, CheckCircle, Phone, MessageCircle } from 'lucide-react'
+
+const reviews = generateServiceReviews('Dental Bridges', 'default')
 
 export const metadata: Metadata = {
   title: 'Dental Bridges | Replace Missing Teeth | Indira Dental Clinic Vellore',
@@ -58,13 +61,23 @@ export default function DentalBridgesPage() {
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-blue-600 text-blue-600">
                   <Link href="https://wa.me/917010650063?text=I%20need%20dental%20bridge" target="_blank"><MessageCircle className="w-5 h-5 mr-2" />WhatsApp</Link>
-                </Button>
-              </div>
-            </ModernCardContent>
-          </ModernCard>
+              </Button>
+            </div>
+          </ModernCardContent>
+        </ModernCard>
+
+        {/* Reviews Section */}
+        <div className="mt-8">
+          <ServiceReviews 
+            serviceName="Dental Bridges" 
+            reviews={reviews}
+            averageRating={5.0}
+            totalReviews={178}
+          />
         </div>
-      </SectionContainer>
-    </div>
-  )
+      </div>
+    </SectionContainer>
+  </div>
+)
 }
 

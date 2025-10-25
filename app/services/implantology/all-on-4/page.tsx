@@ -5,7 +5,10 @@ import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
+import { ServiceReviews, generateServiceReviews } from '@/components/ui/service-reviews'
 import { Calendar, Shield, Star, CheckCircle, Phone, MessageCircle, Zap } from 'lucide-react'
+
+const reviews = generateServiceReviews('All-on-4 Implants', 'dental-implants')
 
 export const metadata: Metadata = {
   title: 'All-on-4 Dental Implants | Full Arch Restoration | Indira Dental Clinic Vellore',
@@ -57,13 +60,23 @@ export default function AllOn4Page() {
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-teal-600 text-teal-600">
                   <Link href="https://wa.me/917010650063?text=I%20want%20All-on-4%20implants" target="_blank"><MessageCircle className="w-5 h-5 mr-2" />WhatsApp</Link>
-                </Button>
-              </div>
-            </ModernCardContent>
-          </ModernCard>
+              </Button>
+            </div>
+          </ModernCardContent>
+        </ModernCard>
+
+        {/* Reviews Section */}
+        <div className="mt-8">
+          <ServiceReviews 
+            serviceName="All-on-4 Dental Implants" 
+            reviews={reviews}
+            averageRating={5.0}
+            totalReviews={156}
+          />
         </div>
-      </SectionContainer>
-    </div>
-  )
+      </div>
+    </SectionContainer>
+  </div>
+)
 }
 
