@@ -419,22 +419,24 @@ export default function SpaceMaintainerPage() {
           />
 
           <CompactServiceWidget 
+            title="Related Orthodontic Services"
+            description="Other orthodontic treatments for children"
             services={[
               {
                 name: "Traditional Braces",
-                url: "/services/orthodontics/traditional-braces",
+                slug: "orthodontics/traditional-braces",
                 duration: "18-24 months",
                 price: "₹25,000 - ₹45,000"
               },
               {
                 name: "Invisalign",
-                url: "/services/orthodontics/invisalign", 
+                slug: "orthodontics/invisalign",
                 duration: "12-18 months",
                 price: "₹35,000 - ₹55,000"
               },
               {
                 name: "Serial Extraction",
-                url: "/services/orthodontics/serial-extraction",
+                slug: "orthodontics/serial-extraction",
                 duration: "2-4 years",
                 price: "₹8,000 - ₹15,000"
               }
@@ -447,13 +449,15 @@ export default function SpaceMaintainerPage() {
             description="Early intervention with space maintainers can prevent complex orthodontic problems. Schedule a consultation with Dr. Rockson Samuel to assess your child's needs."
             primaryAction={{
               text: "Schedule Consultation",
-              url: "/contact"
+              href: "/contact",
+              icon: Calendar
             }}
             secondaryAction={{
               text: "Ask a Question",
-              url: "/ask-the-dentist/submit"
+              href: "/ask-the-dentist/submit",
+              icon: MessageCircle
             }}
-            features={[
+            benefits={[
               "Child-friendly approach",
               "Custom-made appliances",
               "Comprehensive follow-up",

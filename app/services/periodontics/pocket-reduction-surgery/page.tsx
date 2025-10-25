@@ -448,22 +448,24 @@ export default function PocketReductionSurgeryPage() {
           />
 
           <CompactServiceWidget 
+            title="Related Periodontal Services"
+            description="Complementary periodontal treatments available"
             services={[
               {
                 name: "Scaling and Root Planing",
-                url: "/services/periodontics/scaling-root-planing",
+                slug: "periodontics/scaling-root-planing",
                 duration: "1-2 hours",
                 price: "₹3,000 - ₹6,000"
               },
               {
                 name: "Gingival Grafting",
-                url: "/services/periodontics/gingival-grafting", 
+                slug: "periodontics/gingival-grafting",
                 duration: "1-2 hours",
                 price: "₹8,000 - ₹15,000"
               },
               {
                 name: "Periodontal Maintenance",
-                url: "/services/periodontics",
+                slug: "periodontics",
                 duration: "30-60 min",
                 price: "₹1,500 - ₹3,000"
               }
@@ -476,13 +478,15 @@ export default function PocketReductionSurgeryPage() {
             description="Don't let periodontal disease progress. Schedule a consultation with Dr. Rockson Samuel to discuss pocket reduction surgery and restore your oral health."
             primaryAction={{
               text: "Schedule Consultation",
-              url: "/contact"
+              href: "/contact",
+              icon: Calendar
             }}
             secondaryAction={{
               text: "Ask a Question",
-              url: "/ask-the-dentist/submit"
+              href: "/ask-the-dentist/submit",
+              icon: MessageCircle
             }}
-            features={[
+            benefits={[
               "Advanced surgical techniques",
               "Comprehensive follow-up care",
               "Pain management protocols",

@@ -96,7 +96,7 @@ export default function HomePage() {
         {/* Breadcrumb */}
         <Breadcrumb
           items={[
-            { label: 'Home', href: '/' },
+            { title: 'Home', href: '/' },
           ]}
         />
 

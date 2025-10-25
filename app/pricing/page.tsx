@@ -63,8 +63,8 @@ export default function PricingPage() {
         {/* Breadcrumb */}
         <Breadcrumb
           items={[
-            { label: 'Home', href: '/' },
-            { label: 'Pricing', href: '/pricing' },
+            { title: 'Home', href: '/' },
+            { title: 'Pricing', href: '/pricing' },
           ]}
         />
 

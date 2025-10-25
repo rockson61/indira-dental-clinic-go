@@ -12,9 +12,9 @@ export default function LocationsClientPage() {
         {/* Breadcrumb */}
         <Breadcrumb
           items={[
-            { label: 'Home', href: '/' },
-            { label: 'Dentist Near Me', href: '/dentist-near-me' },
-            { label: 'Locations', href: '/dentist-near-me/locations' },
+            { title: 'Home', href: '/' },
+            { title: 'Dentist Near Me', href: '/dentist-near-me' },
+            { title: 'Locations', href: '/dentist-near-me/locations' },
           ]}
         />
 
@@ -53,7 +53,7 @@ export default function LocationsClientPage() {
                 <div>
                   <div className="inline-block px-4 py-2 bg-yellow-400 text-yellow-900 rounded-full text-sm font-medium mb-4">
                     Featured Clinic
-                  </div>
+        </div>
                   <h2 className="text-3xl font-bold mb-4">Vellore - Main Clinic</h2>
                   <p className="text-xl mb-6">
                     Our flagship clinic specializes in dental tourism, offering international patients 
@@ -87,9 +87,9 @@ export default function LocationsClientPage() {
                       Book Consultation
                     </Link>
                   </div>
-                </div>
+          </div>
                 <div className="relative">
-                  <Image
+                <Image
                     src="/professional-dentist-portrait.png"
                     alt="Indira Dental Clinic - Vellore"
                     width={400}
@@ -256,7 +256,7 @@ export default function LocationsClientPage() {
                   >
                     → Suramangalam
                   </Link>
-                </div>
+              </div>
               </ModernCardContent>
             </ModernCard>
 
@@ -282,7 +282,7 @@ export default function LocationsClientPage() {
                   >
                     → Thillai Nagar
                   </Link>
-                </div>
+            </div>
               </ModernCardContent>
             </ModernCard>
           </div>
@@ -417,7 +417,7 @@ export default function LocationsClientPage() {
               <ModernCardHeader>
                 <ModernCardTitle className="text-xl">Smile Makeover</ModernCardTitle>
                 <div className="text-3xl font-bold text-teal-600">₹75,000</div>
-                <p className="text-gray-500">Starting from</p>
+                  <p className="text-gray-500">Starting from</p>
               </ModernCardHeader>
               <ModernCardContent>
                 <ul className="space-y-2 text-left mb-6">
@@ -451,7 +451,7 @@ export default function LocationsClientPage() {
               <ModernCardHeader>
                 <ModernCardTitle className="text-xl">Full Rehabilitation</ModernCardTitle>
                 <div className="text-3xl font-bold text-teal-600">₹1,50,000</div>
-                <p className="text-gray-500">Starting from</p>
+                  <p className="text-gray-500">Starting from</p>
               </ModernCardHeader>
               <ModernCardContent>
                 <ul className="space-y-2 text-left mb-6">
@@ -492,28 +492,28 @@ export default function LocationsClientPage() {
                 Contact us today to book an appointment at your preferred location or to learn more about our dental tourism packages.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
+            <Link
+              href="/contact"
                   className="inline-flex items-center justify-center px-8 py-3 bg-white text-teal-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
+            >
                   <Phone className="w-5 h-5 mr-2" />
-                  Book Appointment
-                </Link>
-                <Link
-                  href="/dental-tourism"
+              Book Appointment
+            </Link>
+            <Link
+              href="/dental-tourism"
                   className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
-                >
+            >
                   <Award className="w-5 h-5 mr-2" />
-                  Explore Dental Tourism
-                </Link>
-                <Link
-                  href="tel:7010650063"
+              Explore Dental Tourism
+            </Link>
+            <Link
+              href="tel:7010650063"
                   className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
-                >
+            >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call: 7010650063
-                </Link>
-              </div>
+              Call: 7010650063
+            </Link>
+          </div>
             </ModernCardContent>
           </ModernCard>
         </section>

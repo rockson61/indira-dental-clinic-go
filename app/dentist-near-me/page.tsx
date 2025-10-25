@@ -139,8 +139,8 @@ export default function DentistNearMePage() {
         {/* Breadcrumb */}
         <Breadcrumb
           items={[
-            { label: 'Home', href: '/' },
-            { label: 'Dentist Near Me', href: '/dentist-near-me' },
+            { title: 'Home', href: '/' },
+            { title: 'Dentist Near Me', href: '/dentist-near-me' },
           ]}
         />
 
@@ -191,14 +191,14 @@ export default function DentistNearMePage() {
               <h3 className="text-xl font-bold mb-2">50% Savings</h3>
               <p className="text-gray-600">Significantly lower costs than other cities</p>
             </ModernCard>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Our Dental Services */}
-        <section className="mb-12">
+      <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Dental Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dentalServices.map((category, index) => (
+          {dentalServices.map((category, index) => (
               <ModernCard key={index} hover className="group">
                 <ModernCardHeader>
                   <ModernCardTitle className="flex items-center gap-2">
@@ -207,53 +207,53 @@ export default function DentistNearMePage() {
                   </ModernCardTitle>
                 </ModernCardHeader>
                 <ModernCardContent>
-                  <ul className="space-y-2">
-                    {category.services.map((service, serviceIndex) => (
+                <ul className="space-y-2">
+                  {category.services.map((service, serviceIndex) => (
                       <li key={serviceIndex}>
                         <Link
                           href={service.link}
                           className="text-teal-600 hover:text-teal-700 hover:underline text-sm"
                         >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
                 </ModernCardContent>
               </ModernCard>
-            ))}
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
 
         {/* Locations */}
-        <section className="mb-12">
+      <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Clinics Across Tamil Nadu</h2>
           <p className="text-center text-gray-700 mb-8">
             Indira Dental Clinic has multiple locations across Tamil Nadu to serve you better. 
             Find a dentist in these cities:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {tamilNaduCities.map((city) => (
-              <Link
-                href={city.link}
-                key={city.name}
+          {tamilNaduCities.map((city) => (
+            <Link
+              href={city.link}
+              key={city.name}
                 className={`p-4 rounded-lg border transition-all hover:shadow-md ${city.isMainClinic ? "border-teal-500 bg-teal-50" : "border-gray-200 hover:border-teal-300"}`}
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="font-semibold text-lg">{city.name}</h3>
+            >
+              <div className="flex items-center justify-between">
+                <h3 className="font-semibold text-lg">{city.name}</h3>
                   <MapPin className={`h-5 w-5 ${city.isMainClinic ? "text-teal-600" : "text-gray-500"}`} />
-                </div>
-                {city.isMainClinic && (
+              </div>
+              {city.isMainClinic && (
                   <span className="inline-block mt-2 text-sm bg-teal-600 text-white px-2 py-1 rounded">Main Clinic</span>
-                )}
-                <p className="mt-2 text-sm text-gray-600">View {city.name} Dental Clinic</p>
-              </Link>
-            ))}
-          </div>
-        </section>
+              )}
+              <p className="mt-2 text-sm text-gray-600">View {city.name} Dental Clinic</p>
+            </Link>
+          ))}
+        </div>
+      </section>
 
         {/* Doctor Information */}
-        <section className="mb-12">
+      <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Meet Our Expert Dentist</h2>
           <ModernCard>
             <ModernCardContent className="py-8">
@@ -265,7 +265,7 @@ export default function DentistNearMePage() {
                     className="rounded-lg shadow-lg w-full max-w-md mx-auto"
                   />
                 </div>
-                <div>
+            <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Rockson Samuel</h3>
                   <p className="text-lg text-teal-600 mb-4">BDS, MDS (Oral & Maxillofacial Surgery)</p>
                   <p className="text-gray-600 mb-4">Experience: 15+ Years</p>
@@ -277,8 +277,8 @@ export default function DentistNearMePage() {
                           {spec}
                         </span>
                       ))}
-                    </div>
-                  </div>
+            </div>
+          </div>
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center">
                       <Star className="w-5 h-5 text-yellow-400 fill-current" />
@@ -287,10 +287,10 @@ export default function DentistNearMePage() {
                     <div className="flex items-center">
                       <Users className="w-5 h-5 text-teal-600" />
                       <span className="ml-1 text-gray-700">500+ Happy Patients</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
+          </div>
+            </div>
+          </div>
             </ModernCardContent>
           </ModernCard>
         </section>
@@ -305,39 +305,39 @@ export default function DentistNearMePage() {
                   <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
                     <span className="text-teal-600 font-bold">{review.name.charAt(0)}</span>
                   </div>
-                  <div>
+            <div>
                     <h4 className="font-semibold text-gray-900">{review.name}</h4>
                     <p className="text-sm text-gray-600">{review.location}</p>
-                  </div>
-                </div>
+            </div>
+          </div>
                 <div className="flex mb-3">
                   {[...Array(review.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
-                </div>
+            </div>
                 <p className="text-gray-700 mb-3">"{review.text}"</p>
                 <div className="text-sm text-gray-500">
                   <span className="bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs">{review.treatment}</span>
-                </div>
+          </div>
               </ModernCard>
             ))}
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* FAQs */}
-        <section className="mb-12">
+      <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left font-medium">{item.question}</AccordionTrigger>
-                <AccordionContent>
-                  <p className="text-gray-700">{item.answer}</p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </section>
+        <Accordion type="single" collapsible className="w-full">
+          {faqItems.map((item, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger className="text-left font-medium">{item.question}</AccordionTrigger>
+              <AccordionContent>
+                <p className="text-gray-700">{item.answer}</p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </section>
 
         {/* CTA Section */}
         <section className="text-center">
@@ -361,12 +361,12 @@ export default function DentistNearMePage() {
                 >
                   <MapPin className="w-5 h-5 mr-2" />
                   Find Locations
-                </Link>
-              </div>
+            </Link>
+          </div>
             </ModernCardContent>
           </ModernCard>
-        </section>
-      </div>
+      </section>
+        </div>
     </div>
   )
 }

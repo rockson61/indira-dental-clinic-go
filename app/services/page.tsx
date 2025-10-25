@@ -305,8 +305,8 @@ export default function ServicesPage() {
         {/* Breadcrumb */}
         <Breadcrumb
           items={[
-            { label: 'Home', href: '/' },
-            { label: 'Services', href: '/services' },
+            { title: 'Home', href: '/' },
+            { title: 'Services', href: '/services' },
           ]}
         />
 

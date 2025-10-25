@@ -44,12 +44,12 @@ export default function AskTheDentistPage() {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-50">
         <div className="container mx-auto px-4 py-12">
           {/* Breadcrumb */}
-          <Breadcrumb
-            items={[
-              { label: 'Home', href: '/' },
-              { label: 'Ask the Dentist', href: '/ask-the-dentist' },
-            ]}
-          />
+        <Breadcrumb
+          items={[
+            { title: 'Home', href: '/' },
+            { title: 'Ask the Dentist', href: '/ask-the-dentist' },
+          ]}
+        />
 
         {/* Hero Section */}
         <section className="text-center mb-12">

@@ -33,8 +33,8 @@ export default function ContactPage() {
         {/* Breadcrumb */}
         <Breadcrumb
           items={[
-            { label: 'Home', href: '/' },
-            { label: 'Contact', href: '/contact' },
+            { title: 'Home', href: '/' },
+            { title: 'Contact', href: '/contact' },
           ]}
         />
 
