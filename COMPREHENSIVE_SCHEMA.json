@@ -1,0 +1,1090 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Dentist", "LocalBusiness", "MedicalBusiness", "MedicalOrganization", "HealthAndBeautyBusiness"],
+      "@id": "https://www.dentalclinicinvellore.in/#organization",
+      "name": "Indira Dental Clinic | Dr Rockson Samuel | Top Dentist in Vellore for RCT, Braces, Implants, & Dental Fillings",
+      "legalName": "Indira Dental Clinic",
+      "alternateName": ["Indira Dental", "Dental Clinic Vellore", "Dr Rockson Dental Clinic"],
+      "url": "https://www.dentalclinicinvellore.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.dentalclinicinvellore.in/#logo",
+        "url": "https://lh3.googleusercontent.com/K8lcq6RY2okp3bLpMSdwccD1j-Xdpy4eY07_YEb1jHr-JXcAyKfOAji1C2SWkQ5hwCF3BJD1_1581Td1=s0",
+        "caption": "Indira Dental Clinic Logo",
+        "contentUrl": "https://www.dentalclinicinvellore.in/logo.png",
+        "width": 600,
+        "height": 600
+      },
+      "image": [
+        "https://lh3.googleusercontent.com/K8lcq6RY2okp3bLpMSdwccD1j-Xdpy4eY07_YEb1jHr-JXcAyKfOAji1C2SWkQ5hwCF3BJD1_1581Td1=s0",
+        "https://www.dentalclinicinvellore.in/professional-dentist-portrait.png",
+        "https://www.dentalclinicinvellore.in/dental-implant-stages.png",
+        "https://www.dentalclinicinvellore.in/root-canal-procedure.png",
+        "https://www.dentalclinicinvellore.in/teeth-whitening.jpg",
+        "https://www.dentalclinicinvellore.in/orthodontic-braces.jpg"
+      ],
+      "description": "Indira Dental Clinic, led by the top dentist Dr. Rockson Samuel in Vellore, Tamil Nadu, offers comprehensive dental care tailored to meet all your oral health needs. Specializing in Root Canal Treatment (RCT), braces for teeth alignment, high-quality dental implants, and precise dental fillings, our clinic is dedicated to providing exceptional dentistry services. We use state-of-the-art technology and advanced techniques in a comfortable and welcoming environment. Whether you seek preventive care or cosmetic enhancements, Indira Dental Clinic ensures personalized attention and effective, high-standard treatments.",
+      "slogan": "Your Smile, Our Priority - Excellence in Every Treatment",
+      "founder": {
+        "@id": "https://www.dentalclinicinvellore.in/#person-drrocksonsam uel"
+      },
+      "telephone": "+91 70106 50063",
+      "email": "rockson68@hotmail.com",
+      "faxNumber": "+91 70106 50063",
+      "address": {
+        "@type": "PostalAddress",
+        "@id": "https://www.dentalclinicinvellore.in/#address",
+        "streetAddress": "3rd Floor, 54, Katpadi Main Rd, Suthanthira Ponvizha Nagar, Gandhi Nagar",
+        "addressLocality": "Vellore",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "632006",
+        "addressCountry": {
+          "@type": "Country",
+          "name": "India",
+          "sameAs": "https://en.wikipedia.org/wiki/India"
+        }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "@id": "https://www.dentalclinicinvellore.in/#geocoordinates",
+        "latitude": "12.9534426",
+        "longitude": "79.1370592",
+        "address": {
+          "@id": "https://www.dentalclinicinvellore.in/#address"
+        }
+      },
+      "hasMap": "https://maps.google.com/maps?cid=14385819900995297414",
+      "maps": "https://maps.app.goo.gl/ngSpvWz8Turx9MsN9",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "10:00:00",
+          "closes": "20:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Tuesday",
+          "opens": "10:00:00",
+          "closes": "20:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Wednesday",
+          "opens": "10:00:00",
+          "closes": "20:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "10:00:00",
+          "closes": "20:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "10:00:00",
+          "closes": "20:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00:00",
+          "closes": "20:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00:00",
+          "closes": "13:30:00"
+        }
+      ],
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Insurance",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "@id": "https://www.dentalclinicinvellore.in/#aggregaterating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "126",
+        "reviewCount": "126",
+        "itemReviewed": {
+          "@id": "https://www.dentalclinicinvellore.in/#organization"
+        }
+      },
+      "medicalSpecialty": [
+        "Dentistry",
+        "Endodontics",
+        "Orthodontics",
+        "Periodontics",
+        "Prosthodontics",
+        "Oral Surgery",
+        "Cosmetic Dentistry",
+        "Pediatric Dentistry",
+        "Implantology"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Vellore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tamil Nadu"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gandhi Nagar"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Katpadi"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Sathuvachari"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bagayam"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kosapet"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Thorapadi"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ranipet"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ambur"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Vaniyambadi"
+        },
+        {
+          "@type": "State",
+          "name": "Tamil Nadu",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "India"
+          }
+        }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@id": "https://www.dentalclinicinvellore.in/#geocoordinates"
+        },
+        "geoRadius": "50000"
+      },
+      "knowsAbout": [
+        "Root Canal Treatment",
+        "Dental Implants",
+        "Orthodontics",
+        "Cosmetic Dentistry",
+        "Teeth Whitening",
+        "Dental Veneers",
+        "Braces",
+        "Invisalign",
+        "Gum Disease Treatment",
+        "Pediatric Dentistry",
+        "Emergency Dental Care",
+        "Dental Crowns",
+        "Dental Bridges",
+        "Dentures",
+        "Oral Surgery",
+        "Wisdom Teeth Removal"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.dentalclinicinvellore.in/#offercatalog",
+        "name": "Dental Services Catalog",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "@id": "https://www.dentalclinicinvellore.in/services/dental-implants#offer",
+            "itemOffered": {
+              "@id": "https://www.dentalclinicinvellore.in/services/dental-implants#service"
+            }
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://www.dentalclinicinvellore.in/services/root-canal-treatment#offer",
+            "itemOffered": {
+              "@id": "https://www.dentalclinicinvellore.in/services/root-canal-treatment#service"
+            }
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://www.dentalclinicinvellore.in/services/orthodontics#offer",
+            "itemOffered": {
+              "@id": "https://www.dentalclinicinvellore.in/services/orthodontics#service"
+            }
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://www.dentalclinicinvellore.in/services/cosmetic-dentistry#offer",
+            "itemOffered": {
+              "@id": "https://www.dentalclinicinvellore.in/services/cosmetic-dentistry#service"
+            }
+          }
+        ]
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Dental Clinic",
+          "description": "Comprehensive dental clinic services"
+        },
+        {
+          "@type": "Offer",
+          "name": "Dentist",
+          "description": "General dentistry services"
+        },
+        {
+          "@type": "Offer",
+          "name": "Endodontist",
+          "description": "Root canal treatment specialists"
+        },
+        {
+          "@type": "Offer",
+          "name": "Cosmetic Dentist",
+          "description": "Smile makeover and aesthetic dentistry"
+        },
+        {
+          "@type": "Offer",
+          "name": "Dental Hygienist",
+          "description": "Professional teeth cleaning and oral hygiene"
+        },
+        {
+          "@type": "Offer",
+          "name": "Dental Radiology",
+          "description": "Digital X-rays and diagnostic imaging"
+        },
+        {
+          "@type": "Offer",
+          "name": "Paediatric Dentist",
+          "description": "Specialized care for children"
+        },
+        {
+          "@type": "Offer",
+          "name": "Dental Implants Provider",
+          "description": "Permanent tooth replacement solutions"
+        },
+        {
+          "@type": "Offer",
+          "name": "Emergency Dental Service",
+          "description": "24/7 emergency dental care"
+        },
+        {
+          "@type": "Offer",
+          "name": "Dental Implants Periodontist",
+          "description": "Implant surgery and gum disease treatment"
+        }
+      ],
+      "employee": [
+        {
+          "@id": "https://www.dentalclinicinvellore.in/#person-drrocksonsam uel"
+        }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": "8"
+      },
+      "foundingDate": "2008",
+      "yearsInOperation": 17,
+      "sameAs": [
+        "https://www.facebook.com/indiradentalclinicvellore/",
+        "https://www.instagram.com/indiradentalvellore/",
+        "https://in.pinterest.com/indradentalclinic/",
+        "https://www.justdial.com/Vellore/Indira-Dental-Clinic-Dr-Rockson-Samuel-Rct-Braces-Implants-Dental-Fillings-Near-Shell-Petrol-Pump-Katpadi-Vellore/9999PX416-X416-240129151733-B2V8_BZDET",
+        "https://dentalreach.today/the-top-10-influencers-of-dentistry/",
+        "https://velloredental.com/",
+        "https://www.dentalclinicinvellore.in/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-7010650063",
+          "contactType": "Customer Service",
+          "availableLanguage": ["English", "Tamil", "Hindi", "Telugu"],
+          "areaServed": "IN",
+          "contactOption": ["TollFree", "HearingImpairedSupported"],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-7010650063",
+          "contactType": "Emergency",
+          "availableLanguage": ["English", "Tamil", "Hindi"],
+          "areaServed": "IN",
+          "contactOption": ["TollFree"],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        }
+      ],
+      "potentialAction": [
+        {
+          "@type": "ReserveAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.dentalclinicinvellore.in/contact",
+            "inLanguage": "en-IN",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          },
+          "result": {
+            "@type": "Reservation",
+            "name": "Dental Appointment Reservation"
+          }
+        },
+        {
+          "@type": "CommunicateAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "tel:+917010650063",
+            "inLanguage": "en-IN"
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["Person", "Dentist", "MedicalPractitioner"],
+      "@id": "https://www.dentalclinicinvellore.in/#person-drrocksonsam uel",
+      "name": "Dr. Rockson Samuel",
+      "givenName": "Rockson",
+      "familyName": "Samuel",
+      "honorificPrefix": "Dr.",
+      "jobTitle": "General Dentist and Community Leader",
+      "description": "Dr. Rockson Samuel is a highly skilled and experienced dentist who has been serving the Vellore community for over 15 years. With BDS, PgDM, and BDM qualifications, he specializes in Root Canal Treatment, Dental Implants, Cosmetic Dentistry, and Orthodontics.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.dentalclinicinvellore.in/professional-dentist-portrait.png",
+        "caption": "Dr. Rockson Samuel - Leading Dentist in Vellore"
+      },
+      "url": "https://www.dentalclinicinvellore.in/about-us/dr-rockson-samuel",
+      "sameAs": [
+        "https://dentalreach.today/the-top-10-influencers-of-dentistry/",
+        "https://www.dentalclinicinvellore.in/about-us/dr-rockson-samuel"
+      ],
+      "worksFor": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "DentalReach Community Health Initiative"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Tamil Nadu Government Dental College, Chennai"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Healthcare Management Institute"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "International Dental Education Board"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "BDS (Bachelor of Dental Surgery)",
+          "educationalLevel": "Bachelor's Degree",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Tamil Nadu Government Dental College"
+          },
+          "dateCreated": "2005"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "PgDM (Post Graduate Diploma in Management)",
+          "educationalLevel": "Post Graduate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Healthcare Management Institute"
+          },
+          "dateCreated": "2010"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "BDM (Bachelor of Dental Medicine)",
+          "educationalLevel": "Bachelor's Degree",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "International Dental Education Board"
+          },
+          "dateCreated": "2012"
+        }
+      ],
+      "knowsAbout": [
+        {
+          "@type": "Thing",
+          "name": "Root Canal Treatment",
+          "sameAs": "https://en.wikipedia.org/wiki/Root_canal_treatment"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dental Implants",
+          "sameAs": "https://en.wikipedia.org/wiki/Dental_implant"
+        },
+        {
+          "@type": "Thing",
+          "name": "Orthodontics",
+          "sameAs": "https://en.wikipedia.org/wiki/Orthodontics"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cosmetic Dentistry",
+          "sameAs": "https://en.wikipedia.org/wiki/Cosmetic_dentistry"
+        },
+        {
+          "@type": "Thing",
+          "name": "Periodontics",
+          "sameAs": "https://en.wikipedia.org/wiki/Periodontics"
+        }
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Dentist",
+        "occupationLocation": {
+          "@id": "https://www.dentalclinicinvellore.in/#address"
+        },
+        "experienceRequirements": "15+ years",
+        "skills": [
+          "Root Canal Treatment",
+          "Dental Implant Surgery",
+          "Orthodontic Treatment",
+          "Cosmetic Dentistry",
+          "Periodontal Therapy",
+          "Pediatric Dentistry"
+        ]
+      },
+      "award": [
+        "Top Rated Dentist (4.9/5 stars)",
+        "Community Leader - DentalReach",
+        "Member - Indian Dental Association",
+        "Member - Tamil Nadu Dental Council"
+      ],
+      "performerIn": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Root Canal Treatment"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Dental Implant Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Orthodontic Treatment"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Cosmetic Dental Procedures"
+        }
+      ],
+      "telephone": "+91-7010650063",
+      "email": "rockson68@hotmail.com"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://www.dentalclinicinvellore.in/services/root-canal-treatment#medicalprocedure",
+      "name": "Root Canal Treatment (Endodontic Therapy)",
+      "alternateName": ["RCT", "Endodontic Treatment", "Root Canal Therapy"],
+      "url": "https://www.dentalclinicinvellore.in/services/root-canal-treatment",
+      "description": "Save infected or damaged teeth with advanced endodontic treatment techniques and pain-free procedures. Root canal treatment involves removing the infected pulp, cleaning and disinfecting the root canals, and sealing them to prevent future infection.",
+      "procedureType": "Endodontic",
+      "bodyLocation": "Tooth",
+      "preparation": "Local anesthesia, Digital X-ray examination",
+      "followup": "Follow-up appointments, Crown placement",
+      "howPerformed": "Access hole creation, Pulp removal, Canal cleaning and shaping, Filling with gutta-percha, Sealing",
+      "status": "Active",
+      "sameAs": "https://en.wikipedia.org/wiki/Root_canal_treatment",
+      "medicationUsed": [
+        "Local Anesthesia",
+        "Antibiotics",
+        "Pain Relievers"
+      ]
+    },
+    {
+      "@type": ["Service", "MedicalService", "MedicalTherapy"],
+      "@id": "https://www.dentalclinicinvellore.in/services/root-canal-treatment#service",
+      "name": "Root Canal Treatment in Vellore",
+      "alternateName": "RCT Vellore",
+      "serviceType": "Root Canal Treatment",
+      "provider": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "url": "https://www.dentalclinicinvellore.in/services/root-canal-treatment",
+      "description": "Painless root canal treatment in Vellore by Dr. Rockson Samuel. Save your natural tooth with advanced endodontic procedures at 50% lower costs.",
+      "areaServed": {
+        "@id": "https://www.dentalclinicinvellore.in/#address"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.dentalclinicinvellore.in/services/root-canal-treatment",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+91-7010650063"
+        }
+      },
+      "category": "Endodontics",
+      "offers": {
+        "@type": "Offer",
+        "@id": "https://www.dentalclinicinvellore.in/services/root-canal-treatment#offer",
+        "price": "4500",
+        "priceCurrency": "INR",
+        "priceRange": "₹3,000 - ₹8,000",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2024-01-01",
+        "url": "https://www.dentalclinicinvellore.in/services/root-canal-treatment",
+        "seller": {
+          "@id": "https://www.dentalclinicinvellore.in/#organization"
+        },
+        "itemOffered": {
+          "@id": "https://www.dentalclinicinvellore.in/services/root-canal-treatment#service"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "4500",
+          "priceCurrency": "INR",
+          "valueAddedTaxIncluded": false
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Root Canal Treatment Options",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Single Sitting RCT",
+              "description": "Complete root canal treatment in one visit"
+            },
+            "price": "4500",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multi-Visit RCT",
+              "description": "Root canal treatment completed over multiple appointments"
+            },
+            "price": "5000",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "RCT Retreatment",
+              "description": "Retreatment of previously failed root canal"
+            },
+            "price": "7000",
+            "priceCurrency": "INR"
+          }
+        ]
+      },
+      "performer": {
+        "@id": "https://www.dentalclinicinvellore.in/#person-drrocksonsam uel"
+      },
+      "relevantSpecialty": "Endodontics",
+      "serviceOutput": "Pain-free, restored tooth function",
+      "termsOfService": "https://www.dentalclinicinvellore.in/terms-of-service"
+    },
+    {
+      "@type": ["Service", "MedicalService"],
+      "@id": "https://www.dentalclinicinvellore.in/services/dental-implants#service",
+      "name": "Dental Implants in Vellore",
+      "alternateName": "Tooth Implants Vellore",
+      "serviceType": "Dental Implantology",
+      "provider": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "url": "https://www.dentalclinicinvellore.in/services/dental-implants",
+      "description": "Permanent tooth replacement solution with titanium implants for natural-looking, long-lasting results. Single tooth to full mouth rehabilitation.",
+      "areaServed": {
+        "@id": "https://www.dentalclinicinvellore.in/#address"
+      },
+      "category": "Implantology",
+      "offers": {
+        "@type": "Offer",
+        "@id": "https://www.dentalclinicinvellore.in/services/dental-implants#offer",
+        "price": "30000",
+        "priceCurrency": "INR",
+        "priceRange": "₹25,000 - ₹50,000",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2024-01-01",
+        "url": "https://www.dentalclinicinvellore.in/services/dental-implants",
+        "seller": {
+          "@id": "https://www.dentalclinicinvellore.in/#organization"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dental Implant Options",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Single Tooth Implant",
+              "description": "Titanium implant with crown for single tooth replacement",
+              "brand": {
+                "@type": "Brand",
+                "name": "Premium Titanium Implants"
+              },
+              "material": "Titanium Grade 4",
+              "warranty": "Lifetime warranty on implant"
+            },
+            "price": "30000",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Multiple Tooth Implants",
+              "description": "3+ dental implants for multiple tooth replacement"
+            },
+            "price": "30000",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Full Mouth Rehabilitation",
+              "description": "Complete smile restoration with implants"
+            },
+            "price": "225000",
+            "priceCurrency": "INR"
+          }
+        ]
+      },
+      "performer": {
+        "@id": "https://www.dentalclinicinvellore.in/#person-drrocksonsam uel"
+      },
+      "relevantSpecialty": "Implantology",
+      "serviceOutput": "Permanent, natural-looking tooth replacement"
+    },
+    {
+      "@type": ["Service", "MedicalService"],
+      "@id": "https://www.dentalclinicinvellore.in/services/orthodontics#service",
+      "name": "Orthodontics and Braces in Vellore",
+      "alternateName": ["Braces Vellore", "Teeth Alignment Vellore", "Invisalign Vellore"],
+      "serviceType": "Orthodontic Treatment",
+      "provider": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "url": "https://www.dentalclinicinvellore.in/services/orthodontics",
+      "description": "Straighten teeth and correct bite issues with traditional braces, ceramic braces, and modern clear aligners for a perfect smile.",
+      "areaServed": {
+        "@id": "https://www.dentalclinicinvellore.in/#address"
+      },
+      "category": "Orthodontics",
+      "offers": {
+        "@type": "Offer",
+        "@id": "https://www.dentalclinicinvellore.in/services/orthodontics#offer",
+        "price": "30000",
+        "priceCurrency": "INR",
+        "priceRange": "₹25,000 - ₹80,000",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2024-01-01",
+        "url": "https://www.dentalclinicinvellore.in/services/orthodontics",
+        "seller": {
+          "@id": "https://www.dentalclinicinvellore.in/#organization"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Orthodontic Treatment Options",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Traditional Metal Braces",
+              "description": "Full treatment including adjustments and retention"
+            },
+            "price": "30000",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Ceramic Braces",
+              "description": "Tooth-colored braces for aesthetic appearance"
+            },
+            "price": "40000",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Clear Aligners (Invisalign)",
+              "description": "Full treatment with invisible aligners and regular check-ups"
+            },
+            "price": "55000",
+            "priceCurrency": "INR"
+          }
+        ]
+      },
+      "performer": {
+        "@id": "https://www.dentalclinicinvellore.in/#person-drrocksonsam uel"
+      },
+      "relevantSpecialty": "Orthodontics",
+      "serviceOutput": "Straight teeth, perfect smile, improved bite"
+    },
+    {
+      "@type": ["Service", "MedicalService"],
+      "@id": "https://www.dentalclinicinvellore.in/services/cosmetic-dentistry#service",
+      "name": "Cosmetic Dentistry in Vellore",
+      "alternateName": ["Teeth Whitening Vellore", "Veneers Vellore", "Smile Makeover Vellore"],
+      "serviceType": "Cosmetic Dental Treatment",
+      "provider": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "url": "https://www.dentalclinicinvellore.in/services/cosmetic-dentistry",
+      "description": "Transform your smile with advanced cosmetic dental procedures including teeth whitening, veneers, bonding, and complete smile makeovers.",
+      "areaServed": {
+        "@id": "https://www.dentalclinicinvellore.in/#address"
+      },
+      "category": "Cosmetic Dentistry",
+      "offers": {
+        "@type": "Offer",
+        "@id": "https://www.dentalclinicinvellore.in/services/cosmetic-dentistry#offer",
+        "price": "6999",
+        "priceCurrency": "INR",
+        "priceRange": "₹2,000 - ₹25,000",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2024-01-01",
+        "url": "https://www.dentalclinicinvellore.in/services/cosmetic-dentistry",
+        "seller": {
+          "@id": "https://www.dentalclinicinvellore.in/#organization"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cosmetic Dentistry Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Teeth Whitening",
+              "description": "Professional in-clinic teeth whitening for brighter smile"
+            },
+            "price": "6999",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Porcelain Veneers",
+              "description": "Ultra-thin porcelain shells per tooth",
+              "material": "Porcelain"
+            },
+            "price": "8500",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Complete Smile Makeover",
+              "description": "Comprehensive cosmetic treatment plan"
+            },
+            "price": "25000",
+            "priceCurrency": "INR"
+          }
+        ]
+      },
+      "performer": {
+        "@id": "https://www.dentalclinicinvellore.in/#person-drrocksonsam uel"
+      },
+      "relevantSpecialty": "Cosmetic Dentistry",
+      "serviceOutput": "Enhanced smile, improved confidence, aesthetic transformation"
+    },
+    {
+      "@type": "Review",
+      "@id": "https://www.dentalclinicinvellore.in/#review-1",
+      "itemReviewed": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Rajesh Kumar"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Dr. Rockson is the most gentle dentist I've ever met. My root canal was completely painless, and the results were perfect. Highly recommend!",
+      "datePublished": "2024-02-10",
+      "publisher": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": "https://www.dentalclinicinvellore.in/#review-2",
+      "itemReviewed": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Priya Venkatesh"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Got my dental implants done by Dr. Rockson. The entire process was smooth, and I'm amazed by how natural they look and feel. Excellent work!",
+      "datePublished": "2024-01-25",
+      "publisher": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": "https://www.dentalclinicinvellore.in/#review-3",
+      "itemReviewed": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sundar Raman"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Dr. Rockson transformed my smile with cosmetic dentistry. His attention to detail and artistic approach gave me the confidence I always wanted.",
+      "datePublished": "2024-01-18",
+      "publisher": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://www.dentalclinicinvellore.in/blog/complete-guide-root-canal-treatment#article",
+      "headline": "Complete Guide to Root Canal Treatment: What to Expect",
+      "alternativeHeadline": "Everything You Need to Know About Root Canal Therapy",
+      "url": "https://www.dentalclinicinvellore.in/blog/complete-guide-root-canal-treatment",
+      "datePublished": "2024-02-15",
+      "dateModified": "2024-02-15",
+      "author": {
+        "@id": "https://www.dentalclinicinvellore.in/#person-drrocksonsam uel"
+      },
+      "publisher": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.dentalclinicinvellore.in/root-canal-procedure.png",
+        "width": 1200,
+        "height": 630
+      },
+      "articleSection": "Endodontics",
+      "articleBody": "Root canal treatment is one of the most misunderstood dental procedures, often causing unnecessary anxiety among patients. In reality, modern root canal therapy is a highly successful, virtually painless procedure that can save your natural tooth and eliminate pain...",
+      "wordCount": 1200,
+      "keywords": ["Root Canal", "Endodontics", "Tooth Pain", "Dental Treatment"],
+      "about": {
+        "@id": "https://www.dentalclinicinvellore.in/services/root-canal-treatment#medicalprocedure"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.dentalclinicinvellore.in/blog/complete-guide-root-canal-treatment"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dentalclinicinvellore.in/faq#faqpage",
+      "url": "https://www.dentalclinicinvellore.in/faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How often should I visit the dentist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most patients, we recommend a dental check-up and professional cleaning every six months. However, Dr. Rockson Samuel may suggest more frequent visits based on your specific oral health needs, especially if you have gum disease, are at high risk for cavities, or have other ongoing dental issues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What causes tooth decay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tooth decay occurs when plaque, a sticky film of bacteria, builds up on teeth and produces acids that erode tooth enamel. This is typically caused by frequent consumption of sugary foods and beverages, poor oral hygiene, dry mouth conditions, or lack of fluoride. Regular brushing, flossing, and dental check-ups at Indira Dental Clinic can help prevent tooth decay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is root canal treatment painful?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, modern root canal treatment is virtually painless. With advanced anesthesia and techniques used by Dr. Rockson Samuel, most patients experience little to no discomfort during the procedure. The treatment actually relieves the pain caused by the infected tooth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a dental implant cost in Vellore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At Indira Dental Clinic, single tooth dental implants range from ₹30,000 to ₹50,000, which includes the implant, abutment, and crown. This is approximately 50% less expensive than metropolitan cities while maintaining the same high quality standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the duration of orthodontic treatment with braces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Orthodontic treatment duration varies depending on the complexity of your case. On average, traditional braces treatment takes 12-24 months. Dr. Rockson Samuel will provide a personalized timeline during your initial consultation based on your specific needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide emergency dental care?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Indira Dental Clinic provides 24/7 emergency dental care. For severe toothaches, broken teeth, dental trauma, or any urgent dental issues, you can call us at +91-7010650063 anytime for immediate assistance."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dentalclinicinvellore.in/#breadcrumblist",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dentalclinicinvellore.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.dentalclinicinvellore.in/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Root Canal Treatment",
+          "item": "https://www.dentalclinicinvellore.in/services/root-canal-treatment"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.dentalclinicinvellore.in/#website",
+      "url": "https://www.dentalclinicinvellore.in/",
+      "name": "Indira Dental Clinic - Best Dentist in Vellore",
+      "description": "Leading dental care in Vellore, Tamil Nadu. Expert treatments including RCT, braces, implants, cosmetic dentistry by Dr. Rockson Samuel.",
+      "publisher": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.dentalclinicinvellore.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dentalclinicinvellore.in/#webpage",
+      "url": "https://www.dentalclinicinvellore.in/",
+      "name": "Indira Dental Clinic | Best Dentist in Vellore - Dr. Rockson Samuel",
+      "isPartOf": {
+        "@id": "https://www.dentalclinicinvellore.in/#website"
+      },
+      "about": {
+        "@id": "https://www.dentalclinicinvellore.in/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dentalclinicinvellore.in/#logo"
+      },
+      "datePublished": "2008-01-01",
+      "dateModified": "2025-10-25",
+      "description": "Leading dental care in Vellore, Tamil Nadu. Expert treatments including RCT, braces, implants, cosmetic dentistry by Dr. Rockson Samuel. 15+ years experience. Book appointment: 7010650063",
+      "breadcrumb": {
+        "@id": "https://www.dentalclinicinvellore.in/#breadcrumblist"
+      },
+      "inLanguage": "en-IN",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": ["https://www.dentalclinicinvellore.in/"]
+        }
+      ]
+    },
+    {
+      "@type": "Place",
+      "@id": "https://www.dentalclinicinvellore.in/in/tamil-nadu/vellore#place",
+      "name": "Vellore",
+      "description": "Vellore is a city in Tamil Nadu, India, served by Indira Dental Clinic with comprehensive dental care services.",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "12.9165167",
+        "longitude": "79.13245"
+      },
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Tamil Nadu",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "India"
+        }
+      },
+      "hasMap": "https://www.google.com/maps/place/Vellore",
+      "sameAs": "https://en.wikipedia.org/wiki/Vellore"
+    }
+  ]
+}
+
