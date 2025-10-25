@@ -3,12 +3,17 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, CheckCircle, Phone, Calendar, Clock, Star, Sparkles, Smile, Zap, Award, Users, TrendingUp, Shield, Heart, Globe, DollarSign, Target, BookOpen, MessageCircle, Play, Download, MapPin } from "lucide-react"
 import { ModernCard, ModernCardContent, ModernCardDescription, ModernCardHeader, ModernCardTitle } from "@/components/ui/modern-card"
+import { GlassCard } from "@/components/ui/glass-card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
+import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
 import { RelevantQAWidget } from "@/components/widgets/relevant-qa-widget"
 import { CompactServiceWidget } from "@/components/widgets/compact-service-widget"
 import { CTAWidget } from "@/components/widgets/cta-widget"
+import { SectionContainer } from "@/components/ui/section-container"
+
+const reviews = generateServiceReviews('Cosmetic Dentistry', 'teeth-whitening')
 
 export const metadata: Metadata = {
   title: 'Best Cosmetic Dentistry in Vellore | Smile Makeover | Teeth Whitening | Dr. Rockson Samuel',
@@ -470,6 +475,90 @@ export default function CosmeticDentistryPage() {
                 <p className="text-gray-700">{faq.answer}</p>
               </ModernCard>
             ))}
+          </div>
+        </section>
+
+        {/* Reviews Section */}
+        <section className="mb-16">
+          <ServiceReviews 
+            serviceName="Cosmetic Dentistry" 
+            reviews={reviews}
+            averageRating={5.0}
+            totalReviews={523}
+          />
+        </section>
+
+        {/* Ask the Dentist - Related Questions */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Questions About Cosmetic Dentistry</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Real patient questions answered by Dr. Rockson Samuel
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-lg font-semibold mb-2 text-teal-700">How long does teeth whitening last?</h3>
+              <p className="text-gray-600 text-sm mb-4">Professional whitening results typically last 1-3 years with proper care and maintenance.</p>
+              <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+                Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </GlassCard>
+            <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-lg font-semibold mb-2 text-teal-700">Are veneers permanent?</h3>
+              <p className="text-gray-600 text-sm mb-4">Veneers are a permanent treatment as a small amount of enamel is removed. They last 10-15 years.</p>
+              <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+                Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </GlassCard>
+            <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-lg font-semibold mb-2 text-teal-700">Is cosmetic dentistry covered by insurance?</h3>
+              <p className="text-gray-600 text-sm mb-4">Most cosmetic procedures are not covered, but we offer flexible EMI options for your convenience.</p>
+              <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+                Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </GlassCard>
+          </div>
+          <div className="text-center">
+            <Button asChild size="lg" variant="outline" className="border-teal-600 text-teal-600">
+              <Link href="/ask-the-dentist/submit">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Ask Your Own Question
+              </Link>
+            </Button>
+          </div>
+        </section>
+
+        {/* Related Services */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Related Dental Services</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Explore our other specialized treatments
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-teal-600 transition-colors">Orthodontics & Braces</h3>
+              <p className="text-gray-600 mb-4">Straighten teeth with braces or Invisalign</p>
+              <Link href="/services/orthodontics" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </GlassCard>
+            <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-teal-600 transition-colors">Dental Implants</h3>
+              <p className="text-gray-600 mb-4">Permanent tooth replacement solution</p>
+              <Link href="/services/dental-implants" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </GlassCard>
+            <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-teal-600 transition-colors">Prosthodontics</h3>
+              <p className="text-gray-600 mb-4">Crowns, bridges, and dentures</p>
+              <Link href="/services/prosthodontics" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </GlassCard>
           </div>
         </section>
 
