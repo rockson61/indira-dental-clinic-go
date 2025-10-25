@@ -72,7 +72,6 @@ const quickLinks = {
     { name: "Pricing Guide", href: "/pricing" },
     { name: "Insurance & Payment", href: "/pricing#insurance" },
     { name: "FAQs", href: "/faqs" },
-    { name: "Appointment Booking", href: "/contact" },
     { name: "Contact Us", href: "/contact" },
   ],
 }

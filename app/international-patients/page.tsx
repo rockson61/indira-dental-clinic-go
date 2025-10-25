@@ -12,7 +12,7 @@ import { generateServiceReviews } from '@/lib/review-data'
 import { 
   Plane, Globe, DollarSign, Heart, Shield, Star, CheckCircle, Phone, 
   MessageCircle, Calendar, MapPin, Clock, Utensils, Hotel, Car, Languages,
-  Award, TrendingUp, Users, Target, Sparkles, ArrowRight
+  Award, TrendingUp, Users, Target, Sparkles, ArrowRight, Mail
 } from 'lucide-react'
 
 const reviews = generateServiceReviews('International Dental Care', 'default')
