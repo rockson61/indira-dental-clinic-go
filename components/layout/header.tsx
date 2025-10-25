@@ -19,7 +19,7 @@ const servicesMenu = {
       services: [
         { name: "General Dentistry", href: "/services/general-dentistry" },
         { name: "Preventive Dentistry", href: "/services/preventive-dentistry" },
-        { name: "Dental Checkups", href: "/services/general-dentistry" },
+        { name: "Dental Checkups", href: "/services/general-dentistry/check-ups" },
         { name: "Emergency Care", href: "/services/emergency-dentistry" },
       ],
     },
