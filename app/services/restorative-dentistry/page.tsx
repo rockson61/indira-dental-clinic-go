@@ -1,10 +1,16 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import Image from "next/image"
-import { Phone, Clock, MapPin, CheckCircle, Crown, Wrench, Calendar } from "lucide-react"
+import { Phone, Clock, MapPin, CheckCircle, Crown, Wrench, Calendar, MessageCircle, ArrowRight, Star, Shield, Heart } from "lucide-react"
 import { GlassCard } from "@/components/ui/glass-card"
+import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from "@/components/ui/modern-card"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
+import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+
+const reviews = generateServiceReviews('Restorative Dentistry', 'default')
 
 export const metadata: Metadata = {
   title: "Restorative Dentistry in Vellore | Dental Crowns, Bridges & Fillings | Dr. Rockson Samuel",
@@ -519,6 +525,85 @@ export default function RestorativeDentistryPage() {
             </Button>
           </div>
         </GlassCard>
+      </SectionContainer>
+
+      {/* Reviews Section */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-yellow-50/50 to-orange-50/50">
+        <ServiceReviews 
+          serviceName="Restorative Dentistry" 
+          reviews={reviews}
+          averageRating={5.0}
+          totalReviews={623}
+        />
+      </SectionContainer>
+
+      {/* Ask the Dentist */}
+      <SectionContainer className="py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Restorative Dentistry Questions</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">Patient questions answered by Dr. Rockson Samuel</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-blue-700">How long do dental crowns last?</h3>
+            <p className="text-gray-600 text-sm mb-4">Porcelain and zirconia crowns typically last 10-15 years with proper care. Some last 20+ years.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-blue-700">Which is better: crown or filling?</h3>
+            <p className="text-gray-600 text-sm mb-4">For large cavities or RCT teeth, crowns are better. Small to medium cavities can use fillings.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-blue-700">Do composite fillings stain?</h3>
+            <p className="text-gray-600 text-sm mb-4">High-quality composite is stain-resistant. Avoid excessive coffee, tea, smoking for best longevity.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+        </div>
+        <div className="text-center">
+          <Button asChild size="lg" variant="outline" className="border-blue-600 text-blue-600">
+            <Link href="/ask-the-dentist/submit">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Ask Your Question
+            </Link>
+          </Button>
+        </div>
+      </SectionContainer>
+
+      {/* Related Services */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-blue-50/50 to-teal-50/50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Related Services</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">Root Canal Treatment</h3>
+            <p className="text-gray-600 mb-4">Save infected teeth before restoration</p>
+            <Link href="/services/root-canal-treatment" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">Prosthodontics</h3>
+            <p className="text-gray-600 mb-4">Advanced crowns, bridges, dentures</p>
+            <Link href="/services/prosthodontics" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">Cosmetic Dentistry</h3>
+            <p className="text-gray-600 mb-4">Enhance appearance while restoring</p>
+            <Link href="/services/cosmetic-dentistry" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+        </div>
       </SectionContainer>
     </div>
   )

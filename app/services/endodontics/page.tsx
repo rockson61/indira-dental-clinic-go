@@ -1,6 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+import { MessageCircle, ArrowRight } from "lucide-react"
+
+const reviews = generateServiceReviews('Endodontics', 'root-canal')
 import {
   AlertTriangle,
   Clock,
@@ -639,6 +643,85 @@ export default function EndodonticsPage() {
             </div>
           </div>
         </GlassCard>
+      </SectionContainer>
+
+      {/* Reviews Section */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-yellow-50/50 to-orange-50/50">
+        <ServiceReviews 
+          serviceName="Endodontics & Root Canal" 
+          reviews={reviews}
+          averageRating={5.0}
+          totalReviews={542}
+        />
+      </SectionContainer>
+
+      {/* Ask the Dentist */}
+      <SectionContainer className="py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Endodontic Questions</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">Common root canal questions answered</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-red-700">How painful is a root canal?</h3>
+            <p className="text-gray-600 text-sm mb-4">Modern root canal treatment is painless with proper anesthesia. Most patients report less pain than the original toothache.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-red-700">Can root canal be done in one sitting?</h3>
+            <p className="text-gray-600 text-sm mb-4">Yes! Single sitting RCT is possible for most cases. Saves time and multiple visits.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-red-700">What happens if I don't get RCT?</h3>
+            <p className="text-gray-600 text-sm mb-4">Infection spreads, abscess forms, severe pain worsens, eventual tooth loss. RCT saves your tooth.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+        </div>
+        <div className="text-center">
+          <Button asChild size="lg" variant="outline" className="border-red-600 text-red-600">
+            <Link href="/ask-the-dentist/submit">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Ask RCT Question
+            </Link>
+          </Button>
+        </div>
+      </SectionContainer>
+
+      {/* Related Services */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-red-50/50 to-orange-50/50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Related Endodontic Services</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Apicoectomy</h3>
+            <p className="text-gray-600 mb-4">Root end surgery for failed RCT</p>
+            <Link href="/services/endodontics/apicoectomy" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Dental Crowns</h3>
+            <p className="text-gray-600 mb-4">Protect RCT-treated teeth</p>
+            <Link href="/services/prosthodontics/dental-crowns" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Emergency Dentistry</h3>
+            <p className="text-gray-600 mb-4">24/7 emergency RCT available</p>
+            <Link href="/services/emergency-dentistry" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+        </div>
       </SectionContainer>
     </div>
   )

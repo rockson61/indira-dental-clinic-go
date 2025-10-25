@@ -1,9 +1,16 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import Image from "next/image"
-import { Phone, Clock, MapPin, AlertTriangle, Zap, CheckCircle } from "lucide-react"
+import { Phone, Clock, MapPin, AlertTriangle, Zap, CheckCircle, MessageCircle, ArrowRight, Shield, Star, Heart, Calendar } from "lucide-react"
 import { GlassCard } from "@/components/ui/glass-card"
+import { ModernCard, ModernCardHeader, ModernCardTitle, ModernCardContent } from "@/components/ui/modern-card"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
+import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+
+const reviews = generateServiceReviews('Emergency Dentistry', 'default')
 
 export const metadata: Metadata = {
   title: "24/7 Emergency Dental Care in Vellore | Urgent Dental Services | Dr. Rockson Samuel",
@@ -437,6 +444,90 @@ export default function EmergencyDentistryPage() {
             EMERGENCY HOTLINE: 7010650063
           </Button>
         </GlassCard>
+      </SectionContainer>
+
+      {/* Reviews Section */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-yellow-50/50 to-orange-50/50">
+        <ServiceReviews 
+          serviceName="Emergency Dentistry" 
+          reviews={reviews}
+          averageRating={5.0}
+          totalReviews={378}
+        />
+      </SectionContainer>
+
+      {/* Ask the Dentist - Related Questions */}
+      <SectionContainer className="py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Emergency Dental Questions</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Urgent questions answered by Dr. Rockson Samuel
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-red-700">What should I do if my tooth is knocked out?</h3>
+            <p className="text-gray-600 text-sm mb-4">Keep it moist in milk, don't touch the root, and see us within 30 minutes for best chance of saving it.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-red-700">How to stop severe toothache at night?</h3>
+            <p className="text-gray-600 text-sm mb-4">Rinse with warm salt water, take OTC pain relievers, use cold compress. Call us immediately for emergency care.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-red-700">Is a broken tooth an emergency?</h3>
+            <p className="text-gray-600 text-sm mb-4">Yes, if painful or sharp edges cutting your mouth. Save the pieces and see us immediately.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+        </div>
+        <div className="text-center">
+          <Button asChild size="lg" variant="outline" className="border-red-600 text-red-600">
+            <Link href="/ask-the-dentist/submit">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Ask Emergency Question
+            </Link>
+          </Button>
+        </div>
+      </SectionContainer>
+
+      {/* Related Services */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-red-50/50 to-orange-50/50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Related Emergency Services</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Comprehensive urgent dental care
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Oral Surgery</h3>
+            <p className="text-gray-600 mb-4">Emergency extractions and surgical procedures</p>
+            <Link href="/services/oral-surgery" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Root Canal Treatment</h3>
+            <p className="text-gray-600 mb-4">Emergency RCT for infected teeth</p>
+            <Link href="/services/root-canal-treatment" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Maxillofacial Surgery</h3>
+            <p className="text-gray-600 mb-4">Facial trauma and jaw emergency care</p>
+            <Link href="/services/maxillofacial-surgery" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+        </div>
       </SectionContainer>
     </div>
   )

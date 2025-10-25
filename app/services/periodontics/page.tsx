@@ -1,12 +1,17 @@
 import type { Metadata } from "next"
-import { Phone, Clock, MapPin, Star, Heart, Shield, Zap, Users, Award, CheckCircle } from "lucide-react"
+import Link from "next/link"
+import { Phone, Clock, MapPin, Star, Heart, Shield, Zap, Users, Award, CheckCircle, MessageCircle, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { GlassCard } from "@/components/ui/glass-card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { GlassPanel } from "@/components/ui/glass-panel"
 import { SectionContainer } from "@/components/ui/section-container"
 import { Breadcrumb } from "@/components/ui/breadcrumb"
+import { ServiceReviews, generateServiceReviews } from "@/components/ui/service-reviews"
+
+const reviews = generateServiceReviews('Periodontics', 'default')
 
 export const metadata: Metadata = {
   title: 'Periodontics & Gum Disease Treatment in Vellore | Expert Gum Care | Indira Dental Clinic',
@@ -425,6 +430,85 @@ export default function PeriodonticsPage() {
               <p>🕒 Mon-Sat: 10AM-8PM | Sun: 10AM-1:30PM</p>
             </div>
           </GlassPanel>
+        </div>
+      </SectionContainer>
+
+      {/* Reviews Section */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-yellow-50/50 to-orange-50/50">
+        <ServiceReviews 
+          serviceName="Periodontics & Gum Treatment" 
+          reviews={reviews}
+          averageRating={5.0}
+          totalReviews={267}
+        />
+      </SectionContainer>
+
+      {/* Ask the Dentist */}
+      <SectionContainer className="py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Periodontal Questions</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">Patient questions about gum health answered</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-red-700">How do I know if I have gum disease?</h3>
+            <p className="text-gray-600 text-sm mb-4">Bleeding gums, bad breath, receding gums, and loose teeth are common signs. Get evaluated immediately.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-red-700">Can gum disease be reversed?</h3>
+            <p className="text-gray-600 text-sm mb-4">Early stage (gingivitis) can be reversed. Advanced stages can be managed and stabilized with treatment.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow">
+            <h3 className="text-lg font-semibold mb-2 text-red-700">Is gum surgery painful?</h3>
+            <p className="text-gray-600 text-sm mb-4">Modern laser gum surgery is minimally invasive with little to no pain. We offer sedation options.</p>
+            <Link href="/ask-the-dentist" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
+              Read Full Answer <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+        </div>
+        <div className="text-center">
+          <Button asChild size="lg" variant="outline" className="border-red-600 text-red-600">
+            <Link href="/ask-the-dentist/submit">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Ask About Gum Health
+            </Link>
+          </Button>
+        </div>
+      </SectionContainer>
+
+      {/* Related Services */}
+      <SectionContainer className="py-16 bg-gradient-to-r from-red-50/50 to-pink-50/50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Related Services</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Dental Implants</h3>
+            <p className="text-gray-600 mb-4">Replace teeth lost to gum disease</p>
+            <Link href="/services/dental-implants" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">General Dentistry</h3>
+            <p className="text-gray-600 mb-4">Regular checkups and cleanings</p>
+            <Link href="/services/general-dentistry" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
+          <GlassCard className="p-6 hover:shadow-xl transition-shadow group">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Preventive Dentistry</h3>
+            <p className="text-gray-600 mb-4">Prevent gum disease before it starts</p>
+            <Link href="/services/preventive-dentistry" className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </GlassCard>
         </div>
       </SectionContainer>
     </div>
