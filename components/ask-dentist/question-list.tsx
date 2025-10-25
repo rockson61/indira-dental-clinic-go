@@ -21,7 +21,11 @@ export function QuestionList({ searchQuery = '', selectedTags = [] }: QuestionLi
   const [questionsPerPage] = useState(6)
 
   useEffect(() => {
+    let isMounted = true
+    
     const fetchQuestions = () => {
+      if (!isMounted) return
+      
       setLoading(true)
       
       // Get published questions from data file
@@ -51,24 +55,33 @@ export function QuestionList({ searchQuery = '', selectedTags = [] }: QuestionLi
         )
       }
 
-      setQuestions(filteredQuestions)
-      setLoading(false)
+      if (isMounted) {
+        setQuestions(filteredQuestions)
+        setLoading(false)
+      }
     }
 
     fetchQuestions()
     
     // Refresh when localStorage changes (when new question submitted)
     const handleStorageChange = () => {
-      fetchQuestions()
+      if (isMounted) {
+        fetchQuestions()
+      }
     }
     
-    window.addEventListener('storage', handleStorageChange)
-    // Also listen for custom event when question is submitted in same tab
-    window.addEventListener('questionSubmitted', handleStorageChange)
+    if (typeof window !== 'undefined') {
+      window.addEventListener('storage', handleStorageChange)
+      // Also listen for custom event when question is submitted in same tab
+      window.addEventListener('questionSubmitted', handleStorageChange)
+    }
     
     return () => {
-      window.removeEventListener('storage', handleStorageChange)
-      window.removeEventListener('questionSubmitted', handleStorageChange)
+      isMounted = false
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('storage', handleStorageChange)
+        window.removeEventListener('questionSubmitted', handleStorageChange)
+      }
     }
   }, [searchQuery, selectedTags])
 
