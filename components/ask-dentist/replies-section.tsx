@@ -8,13 +8,16 @@ import { ThumbsUp, ThumbsDown, Reply as ReplyIcon, User, Calendar, MessageCircle
 import { useState } from 'react'
 
 interface RepliesSectionProps {
-  replies: Reply[]
+  replies?: Reply[]
   questionId: string
 }
 
 export function RepliesSection({ replies, questionId }: RepliesSectionProps) {
   const [helpfulVotes, setHelpfulVotes] = useState<Record<string, number>>({})
   const [showReplyForm, setShowReplyForm] = useState(false)
+
+  // Ensure replies is always an array
+  const safeReplies = replies || []
 
   const handleVote = (replyId: string, isHelpful: boolean) => {
     setHelpfulVotes(prev => ({
@@ -23,7 +26,7 @@ export function RepliesSection({ replies, questionId }: RepliesSectionProps) {
     }))
   }
 
-  const groupedReplies = replies.reduce((acc, reply) => {
+  const groupedReplies = safeReplies.reduce((acc, reply) => {
     if (reply.parentId) {
       if (!acc[reply.parentId]) {
         acc[reply.parentId] = []
@@ -35,7 +38,7 @@ export function RepliesSection({ replies, questionId }: RepliesSectionProps) {
     return acc
   }, {} as Record<string, Reply[]>)
 
-  const topLevelReplies = replies.filter(reply => !reply.parentId)
+  const topLevelReplies = safeReplies.filter(reply => !reply.parentId)
 
   if (topLevelReplies.length === 0) {
     return (
@@ -65,7 +68,7 @@ export function RepliesSection({ replies, questionId }: RepliesSectionProps) {
       <ModernCardHeader>
         <div className="flex items-center justify-between">
           <ModernCardTitle className="text-lg">
-            Conversation ({replies.length} replies)
+            Conversation ({safeReplies.length} replies)
           </ModernCardTitle>
           <Button 
             onClick={() => setShowReplyForm(true)}

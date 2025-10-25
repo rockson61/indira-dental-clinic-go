@@ -153,7 +153,7 @@ export function QuestionDetail({ question, enhancedAnswer }: QuestionDetailProps
       </ModernCard>
 
       {/* Replies Section */}
-      <RepliesSection replies={question.replies} questionId={question.id} />
+      <RepliesSection replies={question.replies || []} questionId={question.id} />
     </div>
   )
 }
